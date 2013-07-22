@@ -13,7 +13,7 @@
 @end
 
 @implementation IDDDViewController
-@synthesize hiLabel;
+@synthesize view;
 
 - (void)viewDidLoad
 {
@@ -27,7 +27,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)sayHi:(id)sender {
-	hiLabel.text = @"Hi";
+- (IBAction)red:(id)sender {
+	view.backgroundColor = [UIColor redColor];
+}
+
+- (IBAction)green:(id)sender {
+}
+
+- (IBAction)blue:(id)sender {
+}
+
+- (IBAction)white:(id)sender {
+}
+
+- (IBAction)black:(id)sender {
+}
+
+- (IBAction)orange:(id)sender {
 }
 @end

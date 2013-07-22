@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface IDDDViewController : UIViewController
-- (IBAction)sayHi:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *hiLabel;
+- (IBAction)red:(id)sender;
+- (IBAction)orange:(id)sender;
+- (IBAction)green:(id)sender;
+- (IBAction)blue:(id)sender;
+- (IBAction)white:(id)sender;
+- (IBAction)black:(id)sender;
+@property (strong, nonatomic) IBOutlet UIView *view;
+
 
 @end
