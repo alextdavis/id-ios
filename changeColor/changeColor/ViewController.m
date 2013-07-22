@@ -27,15 +27,15 @@
 }
 
 - (IBAction)rock:(id)sender {
-	[viewBackground setBackgroundColor:[UIColor redColor]];
+	yourImage.image = [UIImage imageNamed:@"rock.jpg"];
 }
 
 - (IBAction)paper:(id)sender {
-	[viewBackground setBackgroundColor:[UIColor greenColor]];
+	yourImage.image = [UIImage imageNamed:@"paper.jpg"];
 }
 
 - (IBAction)scissors:(id)sender {
-	[viewBackground setBackgroundColor:[UIColor blueColor]];
+	yourImage.image = [UIImage imageNamed:@"scissors.png"];
 }
 
 @end

@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARg-b7-Mih">
@@ -51,37 +51,64 @@
                                     <action selector="scissors:" destination="2" eventType="touchUpInside" id="0O8-j5-D1U"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="95-inukshuk.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hBf-Hx-LaV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBf-Hx-LaV">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="7Rt-du-OWb"/>
                                     <constraint firstAttribute="height" constant="128" id="VKE-No-IkQ"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose Your Move!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gh-qV-AWC">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="––––––––––––––––––––––––––––––––––" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ya-hj-Nv4">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nhp-5R-ibb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="14K-AA-kzf"/>
+                                    <constraint firstAttribute="height" constant="128" id="ndP-38-Pq9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="AI Move" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOZ-zo-bJm">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="xaE-I0-0xU" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="2l5-t3-UJK"/>
+                            <constraint firstItem="hBf-Hx-LaV" firstAttribute="top" secondItem="6Ya-hj-Nv4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4Jh-Nv-eTt"/>
+                            <constraint firstItem="ARg-b7-Mih" firstAttribute="top" secondItem="9Gh-qV-AWC" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7CZ-fy-CQw"/>
+                            <constraint firstItem="uOZ-zo-bJm" firstAttribute="top" secondItem="Nhp-5R-ibb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8qu-JS-gug"/>
+                            <constraint firstItem="hBf-Hx-LaV" firstAttribute="trailing" secondItem="Nhp-5R-ibb" secondAttribute="trailing" type="default" id="DF9-sS-Yyq"/>
+                            <constraint firstItem="uOZ-zo-bJm" firstAttribute="centerX" secondItem="6Ya-hj-Nv4" secondAttribute="centerX" type="default" id="IDy-E8-EpH"/>
                             <constraint firstAttribute="bottom" secondItem="fKf-2X-vEW" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="LbP-hb-vHK"/>
+                            <constraint firstItem="uOZ-zo-bJm" firstAttribute="centerX" secondItem="Nhp-5R-ibb" secondAttribute="centerX" type="default" id="LsH-BT-wX0"/>
+                            <constraint firstItem="hBf-Hx-LaV" firstAttribute="leading" secondItem="Nhp-5R-ibb" secondAttribute="leading" type="default" id="MIL-ir-Z4M"/>
                             <constraint firstItem="fKf-2X-vEW" firstAttribute="leading" secondItem="xaE-I0-0xU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ON8-zE-Y54"/>
-                            <constraint firstItem="hBf-Hx-LaV" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="VxT-50-NL1"/>
+                            <constraint firstItem="6Ya-hj-Nv4" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="W0n-yX-HG6"/>
                             <constraint firstItem="xaE-I0-0xU" firstAttribute="leading" secondItem="ARg-b7-Mih" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="YF2-4d-Nxy"/>
-                            <constraint firstItem="ARg-b7-Mih" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="45" id="b6g-ob-4kM"/>
-                            <constraint firstItem="hBf-Hx-LaV" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="h1t-vi-U8m"/>
+                            <constraint firstItem="hBf-Hx-LaV" firstAttribute="centerX" secondItem="9Gh-qV-AWC" secondAttribute="centerX" type="default" id="Ziy-t7-k0h"/>
+                            <constraint firstItem="ARg-b7-Mih" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="45" id="cg9-Dh-ghH"/>
+                            <constraint firstItem="Nhp-5R-ibb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="dYz-gj-CYa"/>
+                            <constraint firstItem="9Gh-qV-AWC" firstAttribute="top" secondItem="hBf-Hx-LaV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="k8T-UJ-WFL"/>
                             <constraint firstAttribute="bottom" secondItem="ARg-b7-Mih" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="omO-5H-hAQ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="image" destination="hBf-Hx-LaV" id="552-ce-Dq7"/>
+                        <outlet property="aiImage" destination="Nhp-5R-ibb" id="zGo-5v-jjL"/>
                         <outlet property="viewBackground" destination="3" id="TdP-xN-jlU"/>
+                        <outlet property="yourImage" destination="hBf-Hx-LaV" id="aLc-mN-PBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <resources>
-        <image name="95-inukshuk.jpg" width="600" height="450"/>
-    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
@@ -92,14 +119,15 @@
                 <relationship kind="action" name="paper:"/>
                 <relationship kind="action" name="rock:"/>
                 <relationship kind="action" name="scissors:"/>
-                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="aiImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="viewBackground" candidateClass="UIView"/>
+                <relationship kind="outlet" name="yourImage" candidateClass="UIImageView"/>
             </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
