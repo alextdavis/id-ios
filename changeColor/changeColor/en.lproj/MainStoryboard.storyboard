@@ -54,10 +54,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fKf-2X-vEW" firstAttribute="leading" secondItem="xaE-I0-0xU" secondAttribute="leading" type="default" id="Ffj-8t-LuX"/>
-                            <constraint firstItem="fKf-2X-vEW" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="MMo-Dy-H72"/>
+                            <constraint firstItem="ARg-b7-Mih" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="P9P-HV-RF7"/>
                             <constraint firstItem="ARg-b7-Mih" firstAttribute="top" secondItem="3" secondAttribute="top" constant="175" id="Xy6-Gc-PJz"/>
-                            <constraint firstItem="xaE-I0-0xU" firstAttribute="leading" secondItem="ARg-b7-Mih" secondAttribute="leading" type="default" id="ffG-og-3za"/>
+                            <constraint firstItem="xaE-I0-0xU" firstAttribute="centerX" secondItem="fKf-2X-vEW" secondAttribute="centerX" type="default" id="gYd-4O-Dxc"/>
+                            <constraint firstItem="ARg-b7-Mih" firstAttribute="centerX" secondItem="xaE-I0-0xU" secondAttribute="centerX" type="default" id="ga8-h2-luV"/>
                             <constraint firstItem="xaE-I0-0xU" firstAttribute="top" secondItem="ARg-b7-Mih" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="o3F-sX-Gjl"/>
                             <constraint firstItem="fKf-2X-vEW" firstAttribute="top" secondItem="xaE-I0-0xU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vzR-uA-8N9"/>
                         </constraints>
@@ -80,6 +80,8 @@
                 <relationship kind="action" name="blue:"/>
                 <relationship kind="action" name="green:"/>
                 <relationship kind="action" name="red:"/>
+                <relationship kind="action" name="spasm:"/>
+                <relationship kind="outlet" name="spasmO" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="viewBackground" candidateClass="UIView"/>
             </relationships>
         </class>
