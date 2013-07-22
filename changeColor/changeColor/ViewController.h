@@ -10,11 +10,12 @@
 
 @interface ViewController : UIViewController{
 	
+	IBOutlet UIImageView *image;
 	IBOutlet UIView *viewBackground;
 }
-- (IBAction)red:(id)sender;
-- (IBAction)green:(id)sender;
-- (IBAction)blue:(id)sender;
+- (IBAction)rock:(id)sender;
+- (IBAction)paper:(id)sender;
+- (IBAction)scissors:(id)sender;
 
 
 @end

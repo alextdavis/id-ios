@@ -26,15 +26,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)red:(id)sender {
+- (IBAction)rock:(id)sender {
 	[viewBackground setBackgroundColor:[UIColor redColor]];
 }
 
-- (IBAction)green:(id)sender {
+- (IBAction)paper:(id)sender {
 	[viewBackground setBackgroundColor:[UIColor greenColor]];
 }
 
-- (IBAction)blue:(id)sender {
+- (IBAction)scissors:(id)sender {
 	[viewBackground setBackgroundColor:[UIColor blueColor]];
 }
 
