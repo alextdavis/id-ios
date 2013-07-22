@@ -1,6 +1,6 @@
 //
 //  IDDDViewController.m
-//  Hello World
+//  changeColor
 //
 //  Created by iD Student on 7/22/13.
 //  Copyright (c) 2013 iD Student. All rights reserved.
@@ -13,7 +13,6 @@
 @end
 
 @implementation IDDDViewController
-//@synthesize view;
 
 - (void)viewDidLoad
 {
@@ -27,22 +26,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)red:(id)sender {
-	//view.backgroundColor = [UIColor redColor];
-}
-
-- (IBAction)green:(id)sender {
-}
-
-- (IBAction)blue:(id)sender {
-}
-
-- (IBAction)white:(id)sender {
-}
-
-- (IBAction)black:(id)sender {
-}
-
-- (IBAction)orange:(id)sender {
-}
 @end
