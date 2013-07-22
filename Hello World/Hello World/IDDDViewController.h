@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface IDDDViewController : UIViewController
+- (IBAction)sayHi:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *hiLabel;
 
 @end

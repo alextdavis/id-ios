@@ -13,6 +13,7 @@
 @end
 
 @implementation IDDDViewController
+@synthesize hiLabel;
 
 - (void)viewDidLoad
 {
@@ -26,4 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)sayHi:(id)sender {
+	hiLabel.text = @"Hi";
+}
 @end
