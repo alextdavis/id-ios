@@ -26,4 +26,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	ViewController2 *vcTwo = (ViewController2*) [segue destinationViewController];
+	vcTwo.data = 25000;
+}
+
 @end

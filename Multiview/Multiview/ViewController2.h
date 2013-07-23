@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController2 : UIViewController
+@interface ViewController2 : UIViewController {
+	
+	IBOutlet UILabel *label;
+}
+
+
+@property int data;
+
 - (IBAction)back:(id)sender;
 
 @end
