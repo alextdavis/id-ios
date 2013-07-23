@@ -12,20 +12,15 @@
 	
 	IBOutlet UIImageView *yourImage;
 	IBOutlet UIImageView *aiImage;
+	IBOutlet UILabel *result;
 	IBOutlet UIView *viewBackground;
+	IBOutlet UILabel *aiScore;
+	IBOutlet UILabel *yourScore;
 }
 - (IBAction)rock:(id)sender;
 - (IBAction)paper:(id)sender;
 - (IBAction)scissors:(id)sender;
 
-- (int) rpsAI
-{
-	int leRandom = arc4random() % 4;
-	if (leRandom == 0)
-	{
-		
-	}
-	
-}
+
 
 @end

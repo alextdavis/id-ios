@@ -53,7 +53,7 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBf-Hx-LaV">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="VKE-No-IkQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="oqL-PT-bIQ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose Your Move!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gh-qV-AWC">
@@ -69,10 +69,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nhp-5R-ibb">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="14K-AA-kzf"/>
-                                    <constraint firstAttribute="height" constant="128" id="ndP-38-Pq9"/>
+                                    <constraint firstAttribute="height" constant="100" id="v9Q-u9-emL"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="AI Move" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOZ-zo-bJm">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWk-ja-ltG">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="AI: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVX-7O-QFN">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxy-ZJ-UkJ">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -81,28 +96,37 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="xaE-I0-0xU" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="2l5-t3-UJK"/>
-                            <constraint firstItem="hBf-Hx-LaV" firstAttribute="top" secondItem="6Ya-hj-Nv4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4Jh-Nv-eTt"/>
+                            <constraint firstItem="uOZ-zo-bJm" firstAttribute="top" secondItem="Nhp-5R-ibb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3mI-PV-7Y1"/>
                             <constraint firstItem="ARg-b7-Mih" firstAttribute="top" secondItem="9Gh-qV-AWC" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7CZ-fy-CQw"/>
-                            <constraint firstItem="uOZ-zo-bJm" firstAttribute="top" secondItem="Nhp-5R-ibb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8qu-JS-gug"/>
                             <constraint firstItem="hBf-Hx-LaV" firstAttribute="trailing" secondItem="Nhp-5R-ibb" secondAttribute="trailing" type="default" id="DF9-sS-Yyq"/>
-                            <constraint firstItem="uOZ-zo-bJm" firstAttribute="centerX" secondItem="6Ya-hj-Nv4" secondAttribute="centerX" type="default" id="IDy-E8-EpH"/>
+                            <constraint firstItem="uOZ-zo-bJm" firstAttribute="centerX" secondItem="Nhp-5R-ibb" secondAttribute="centerX" type="default" id="Hoo-Dc-c7O"/>
+                            <constraint firstItem="bxy-ZJ-UkJ" firstAttribute="baseline" secondItem="fWk-ja-ltG" secondAttribute="baseline" type="default" id="JJc-Gw-xOD"/>
+                            <constraint firstItem="uOZ-zo-bJm" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="Jj2-h7-OUp"/>
                             <constraint firstAttribute="bottom" secondItem="fKf-2X-vEW" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="LbP-hb-vHK"/>
-                            <constraint firstItem="uOZ-zo-bJm" firstAttribute="centerX" secondItem="Nhp-5R-ibb" secondAttribute="centerX" type="default" id="LsH-BT-wX0"/>
                             <constraint firstItem="hBf-Hx-LaV" firstAttribute="leading" secondItem="Nhp-5R-ibb" secondAttribute="leading" type="default" id="MIL-ir-Z4M"/>
                             <constraint firstItem="fKf-2X-vEW" firstAttribute="leading" secondItem="xaE-I0-0xU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ON8-zE-Y54"/>
-                            <constraint firstItem="6Ya-hj-Nv4" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="W0n-yX-HG6"/>
+                            <constraint firstItem="6Ya-hj-Nv4" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="TAu-m1-Fg3"/>
                             <constraint firstItem="xaE-I0-0xU" firstAttribute="leading" secondItem="ARg-b7-Mih" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="YF2-4d-Nxy"/>
                             <constraint firstItem="hBf-Hx-LaV" firstAttribute="centerX" secondItem="9Gh-qV-AWC" secondAttribute="centerX" type="default" id="Ziy-t7-k0h"/>
                             <constraint firstItem="ARg-b7-Mih" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="45" id="cg9-Dh-ghH"/>
                             <constraint firstItem="Nhp-5R-ibb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="dYz-gj-CYa"/>
+                            <constraint firstItem="CVX-7O-QFN" firstAttribute="baseline" secondItem="fWk-ja-ltG" secondAttribute="baseline" type="default" id="e6e-fb-ori"/>
+                            <constraint firstItem="hBf-Hx-LaV" firstAttribute="top" secondItem="6Ya-hj-Nv4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fY0-bN-hMe"/>
+                            <constraint firstAttribute="trailing" secondItem="bxy-ZJ-UkJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fm9-Y6-EIZ"/>
+                            <constraint firstItem="CVX-7O-QFN" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fmz-cM-LD9"/>
+                            <constraint firstItem="CVX-7O-QFN" firstAttribute="top" secondItem="3" secondAttribute="top" constant="210" id="i9w-a5-aae"/>
                             <constraint firstItem="9Gh-qV-AWC" firstAttribute="top" secondItem="hBf-Hx-LaV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="k8T-UJ-WFL"/>
                             <constraint firstAttribute="bottom" secondItem="ARg-b7-Mih" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="omO-5H-hAQ"/>
+                            <constraint firstItem="fWk-ja-ltG" firstAttribute="centerX" secondItem="uOZ-zo-bJm" secondAttribute="centerX" type="default" id="s0p-ve-Ula"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="aiImage" destination="Nhp-5R-ibb" id="zGo-5v-jjL"/>
+                        <outlet property="aiScore" destination="CVX-7O-QFN" id="1q9-rb-yh6"/>
+                        <outlet property="result" destination="fWk-ja-ltG" id="JHc-RR-LTx"/>
                         <outlet property="viewBackground" destination="3" id="TdP-xN-jlU"/>
                         <outlet property="yourImage" destination="hBf-Hx-LaV" id="aLc-mN-PBf"/>
+                        <outlet property="yourScore" destination="bxy-ZJ-UkJ" id="hBk-MY-acw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -120,8 +144,11 @@
                 <relationship kind="action" name="rock:"/>
                 <relationship kind="action" name="scissors:"/>
                 <relationship kind="outlet" name="aiImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="aiScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="result" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="viewBackground" candidateClass="UIView"/>
                 <relationship kind="outlet" name="yourImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="yourScore" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>
