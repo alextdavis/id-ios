@@ -10,9 +10,18 @@
 
 @interface ViewController : UIViewController {
 	
-	IBOutlet UIImageView *imageViewA;
-	IBOutlet UIImageView *imageViewB;
-	IBOutlet UILabel *statusLabel;
+	IBOutlet UIImageView *backView;
+	IBOutlet UILabel *scoreLabel;
+	
+	
+	int score;
+	int won;
+	NSString *background;
+	int level;
 }
+- (IBAction)start:(id)sender;
+- (IBAction)next:(id)sender;
+- (IBAction)sendScore:(id)sender;
+- (IBAction)seeScores:(id)sender;
 
 @end

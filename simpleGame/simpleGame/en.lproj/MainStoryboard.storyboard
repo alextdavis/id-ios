@@ -9,19 +9,110 @@
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TfL-3h-Hz2"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TfL-3h-Hz2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="zm3-MV-lL7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hg-Ye-Da0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="px7-VJ-XuZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="2" eventType="touchUpInside" id="xMq-Vv-Ecy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GT-XD-Jmo">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="next:" destination="2" eventType="touchUpInside" id="wlw-UF-uMs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOZ-JS-N5v">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdZ-mO-3ox">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOE-gC-5qB">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendScore:" destination="2" eventType="touchUpInside" id="HBL-ko-Ae5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="il3-0Z-TjM">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="See">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seeScores:" destination="2" eventType="touchUpInside" id="071-VJ-J72"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="il3-0Z-TjM" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="1w9-pi-2sN"/>
+                            <constraint firstItem="gdZ-mO-3ox" firstAttribute="top" secondItem="aOZ-JS-N5v" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4Xc-ez-XJ9"/>
+                            <constraint firstItem="aOZ-JS-N5v" firstAttribute="top" secondItem="3" secondAttribute="top" constant="122" id="7zj-ys-Dl8"/>
+                            <constraint firstItem="gdZ-mO-3ox" firstAttribute="trailing" secondItem="aOZ-JS-N5v" secondAttribute="trailing" type="default" id="Ezy-ff-BId"/>
+                            <constraint firstItem="2hg-Ye-Da0" firstAttribute="top" secondItem="3" secondAttribute="top" constant="7" id="Ga0-BG-Y7c"/>
+                            <constraint firstItem="3GT-XD-Jmo" firstAttribute="top" secondItem="3" secondAttribute="top" constant="63" id="I36-py-0BG"/>
+                            <constraint firstItem="3GT-XD-Jmo" firstAttribute="trailing" secondItem="2hg-Ye-Da0" secondAttribute="trailing" type="default" id="JXb-7f-kVE"/>
                             <constraint firstItem="TfL-3h-Hz2" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Knt-y4-Q5f"/>
+                            <constraint firstItem="2hg-Ye-Da0" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="PVi-up-adz"/>
+                            <constraint firstItem="gdZ-mO-3ox" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="TQ5-OZ-YVx"/>
+                            <constraint firstItem="aOZ-JS-N5v" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="TTo-lY-N5i"/>
                             <constraint firstItem="TfL-3h-Hz2" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="bea-cJ-YdJ"/>
-                            <constraint firstItem="TfL-3h-Hz2" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="lkL-HF-G3q"/>
-                            <constraint firstItem="TfL-3h-Hz2" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="wZV-3A-cbl"/>
+                            <constraint firstItem="3GT-XD-Jmo" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="erT-vO-2f7"/>
+                            <constraint firstItem="cOE-gC-5qB" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="f1W-md-5Vz"/>
+                            <constraint firstItem="cOE-gC-5qB" firstAttribute="trailing" secondItem="gdZ-mO-3ox" secondAttribute="trailing" type="default" id="kAb-ka-06S"/>
+                            <constraint firstItem="il3-0Z-TjM" firstAttribute="trailing" secondItem="cOE-gC-5qB" secondAttribute="trailing" type="default" id="ma6-sN-BCq"/>
+                            <constraint firstItem="TfL-3h-Hz2" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="o2M-Rc-uYK"/>
+                            <constraint firstItem="3GT-XD-Jmo" firstAttribute="trailing" secondItem="aOZ-JS-N5v" secondAttribute="trailing" type="default" id="pFn-hM-25u"/>
+                            <constraint firstItem="il3-0Z-TjM" firstAttribute="top" secondItem="cOE-gC-5qB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qoD-ix-IC3"/>
+                            <constraint firstAttribute="bottom" secondItem="il3-0Z-TjM" secondAttribute="bottom" constant="13" id="sMS-1d-OVZ"/>
                         </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="backView" destination="TfL-3h-Hz2" id="HCw-rF-aB3"/>
+                        <outlet property="scoreLabel" destination="gdZ-mO-3ox" id="DUx-sn-p3s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,9 +125,12 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="imageViewA" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="imageViewB" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
+                <relationship kind="action" name="next:"/>
+                <relationship kind="action" name="seeScores:"/>
+                <relationship kind="action" name="sendScore:"/>
+                <relationship kind="action" name="start:"/>
+                <relationship kind="outlet" name="backView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

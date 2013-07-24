@@ -20,7 +20,6 @@
 		3F7F6E91179F12C600CBFC43 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7F6E90179F12C600CBFC43 /* Default-568h@2x.png */; };
 		3F7F6E94179F12C600CBFC43 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7F6E92179F12C600CBFC43 /* MainStoryboard.storyboard */; };
 		3F7F6E97179F12C600CBFC43 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F6E96179F12C600CBFC43 /* ViewController.m */; };
-		3F7F6E9F179F18CE00CBFC43 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F6E9E179F18CE00CBFC43 /* Game.m */; };
 		3F7F6EA2179F1B3E00CBFC43 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F6EA1179F1B3E00CBFC43 /* Player.m */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +44,6 @@
 		3F7F6E93179F12C600CBFC43 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7F6E95179F12C600CBFC43 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3F7F6E96179F12C600CBFC43 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3F7F6E9D179F18CE00CBFC43 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
-		3F7F6E9E179F18CE00CBFC43 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		3F7F6EA0179F1B3E00CBFC43 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		3F7F6EA1179F1B3E00CBFC43 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,8 +109,6 @@
 				3F7F6E92179F12C600CBFC43 /* MainStoryboard.storyboard */,
 				3F7F6E95179F12C600CBFC43 /* ViewController.h */,
 				3F7F6E96179F12C600CBFC43 /* ViewController.m */,
-				3F7F6E9D179F18CE00CBFC43 /* Game.h */,
-				3F7F6E9E179F18CE00CBFC43 /* Game.m */,
 				3F7F6EA0179F1B3E00CBFC43 /* Player.h */,
 				3F7F6EA1179F1B3E00CBFC43 /* Player.m */,
 				3F7F6E81179F12C500CBFC43 /* Supporting Files */,
@@ -204,7 +199,6 @@
 				3F7F6E87179F12C500CBFC43 /* main.m in Sources */,
 				3F7F6E8B179F12C500CBFC43 /* AppDelegate.m in Sources */,
 				3F7F6E97179F12C600CBFC43 /* ViewController.m in Sources */,
-				3F7F6E9F179F18CE00CBFC43 /* Game.m in Sources */,
 				3F7F6EA2179F1B3E00CBFC43 /* Player.m in Sources */,
 				3F55100417A0108100829498 /* Entity.m in Sources */,
 				3F55100717A0109D00829498 /* Cart.m in Sources */,
