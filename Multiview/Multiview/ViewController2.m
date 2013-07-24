@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	NSLog([[NSString alloc] initWithFormat:@"%d", data]);
+	//NSLog([[NSString alloc] initWithFormat:@"%d", data]);
 	label.text = [[NSString alloc] initWithFormat:@"View 2:%d", data];
 	// Do any additional setup after loading the view.
 }
