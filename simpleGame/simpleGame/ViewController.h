@@ -8,19 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "Player.h"
+#import "Entity.h"
 
 @interface ViewController : UIViewController {
 	
 	IBOutlet UIImageView *backView;
 	IBOutlet UILabel *scoreLabel;
+	IBOutlet UIButton *startO;
 	
 	
 	int score;
 	int won;
 	NSString *background;
 	int level;
-	
+	NSDictionary *json;
 	NSMutableArray *viewArray;
+	Player *player;
 	
 }
 - (IBAction)start:(id)sender;

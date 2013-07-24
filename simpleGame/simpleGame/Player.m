@@ -10,6 +10,19 @@
 
 @implementation Player
 
+@synthesize x;
+@synthesize y;
+@synthesize width;
+@synthesize height;
+@synthesize playerView;
+@synthesize dead;
+@synthesize hp;
+@synthesize level;
+@synthesize state;
+@synthesize jumpa;
+@synthesize jumpt;
+@synthesize vc;
+
 -(id)init:(int)xi :(int)yi :(NSString *)srci :(UIViewController*)viewController{
 	x = xi;
 	y = yi;
@@ -23,6 +36,8 @@
 	jumpt = 0;
 	vc = viewController;
 }
+
+
 
 -(UIView*)draw {
 	//[vc.view addSubview:playerView];

@@ -18,6 +18,14 @@
 {
     [super viewDidLoad];
 	background = @"bg";
+	
+	NSError *error = nil;
+	NSData *levels = [[NSData alloc] initWithContentsOfFile:@"File"];
+	json = [NSJSONSerialization
+						  JSONObjectWithData: levels
+						  options:kNilOptions error:&error];
+	
+	
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -43,15 +51,35 @@
 	}
 }*/
 
-
 -(void)newGame {
 	background = @"bg";
-	Player *player = [[Player alloc] init];
+	player = [[Player alloc] init];
+	[viewArray removeAllObjects];
 	[viewArray addObject:player.draw];
+	score = 0;
+	won = 0;
+	
+	//clear Timer
+	startO.titleLabel.text = @"Reset";
 }
 
+-(void)loadGame:(int)lvl {
+	//clear Timer
+	level = lvl;
+	[viewArray removeAllObjects];
+	
+	for (int i = 0; i<[[json objectForKey:[[NSString alloc] initWithFormat:@"%d",level]][@"ent"] count]; i++) {
+		Entity *ent = [[Entity alloc] init];
+		[viewArray addObject:ent];
+	}
+	player.x = [json objectForKey:[[NSString alloc] initWithFormat:@"%d", level]][@"player"][0];
+	player.y = [json objectForKey:[[NSString alloc] initWithFormat:@"%d", level]][@"player"][1];
+	player.resurrect;
+	
+}
 
 - (IBAction)start:(id)sender {
+	self.newGame;
 	
 }
 

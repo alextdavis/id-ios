@@ -112,6 +112,7 @@
                     <connections>
                         <outlet property="backView" destination="TfL-3h-Hz2" id="HCw-rF-aB3"/>
                         <outlet property="scoreLabel" destination="gdZ-mO-3ox" id="DUx-sn-p3s"/>
+                        <outlet property="startO" destination="2hg-Ye-Da0" id="1tT-gO-Cvu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
