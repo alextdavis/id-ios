@@ -23,12 +23,4 @@
 	UIViewController *vc;
 }
 
-
--(id)init :(int)xi :(int)yi :(NSString*)srci;
--(void)kill :(NSString*)cause;
--(void)ressurrect;
-
-
-
-
 @end

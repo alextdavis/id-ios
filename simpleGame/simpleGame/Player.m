@@ -10,8 +10,7 @@
 
 @implementation Player
 
--(id)init:(int)xi :(int)yi :(NSString *)srci :(UIViewController*)viewController
-{
+-(id)init:(int)xi :(int)yi :(NSString *)srci :(UIViewController*)viewController{
 	x = xi;
 	y = yi;
 	width = 100;

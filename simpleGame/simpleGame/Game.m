@@ -7,11 +7,15 @@
 //
 
 #import "Game.h"
+#import "Entity.h"
+#import "Cart.h"
 
 @implementation Game
 
 -(id)init{
 	background = @"bg";
+	
+	Entity *aCart = [[Cart alloc] init];
 	
 }
 

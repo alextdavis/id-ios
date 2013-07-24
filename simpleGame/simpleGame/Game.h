@@ -12,7 +12,7 @@
 	int score;
 	int won;
 	NSString *background;
-	int level = 0;
+	int level;
 	
 }
 
