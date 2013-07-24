@@ -15,7 +15,7 @@
 	y = yi;
 	width = 100;
 	height = 100;
-	playerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chicken.png"]];
+	playerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chicken.tiff"]];
 	dead = NO;
 	hp = 100;
 	state = 0;
@@ -24,8 +24,10 @@
 	vc = viewController;
 }
 
--(void)draw {
-	[vc.view addSubview:playerView];
+-(UIView*)draw {
+	//[vc.view addSubview:playerView];
+	playerView.bounds = CGRectMake(0, 150, 50, 50);
+	return playerView;
 }
 
 -(void)killIt:(NSString*)cause {

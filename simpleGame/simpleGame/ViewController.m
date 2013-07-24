@@ -43,7 +43,16 @@
 	}
 }*/
 
+
+-(void)newGame {
+	background = @"bg";
+	Player *player = [[Player alloc] init];
+	[viewArray addObject:player.draw];
+}
+
+
 - (IBAction)start:(id)sender {
+	
 }
 
 - (IBAction)next:(id)sender {

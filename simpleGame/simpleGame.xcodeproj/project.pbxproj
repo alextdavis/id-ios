@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F55100417A0108100829498 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F55100317A0108100829498 /* Entity.m */; };
 		3F55100717A0109D00829498 /* Cart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F55100617A0109D00829498 /* Cart.m */; };
+		3F55100917A034F000829498 /* chicken.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3F55100817A034F000829498 /* chicken.tiff */; };
 		3F7F6E7B179F12C500CBFC43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7F6E7A179F12C500CBFC43 /* UIKit.framework */; };
 		3F7F6E7D179F12C500CBFC43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7F6E7C179F12C500CBFC43 /* Foundation.framework */; };
 		3F7F6E7F179F12C500CBFC43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7F6E7E179F12C500CBFC43 /* CoreGraphics.framework */; };
@@ -28,6 +29,7 @@
 		3F55100317A0108100829498 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
 		3F55100517A0109D00829498 /* Cart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cart.h; sourceTree = "<group>"; };
 		3F55100617A0109D00829498 /* Cart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cart.m; sourceTree = "<group>"; };
+		3F55100817A034F000829498 /* chicken.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = chicken.tiff; sourceTree = "<group>"; };
 		3F7F6E77179F12C500CBFC43 /* simpleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7F6E7A179F12C500CBFC43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3F7F6E7C179F12C500CBFC43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,6 +75,14 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		3F55100A17A034F600829498 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				3F55100817A034F000829498 /* chicken.tiff */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
 		3F7F6E6E179F12C500CBFC43 = {
 			isa = PBXGroup;
 			children = (
@@ -105,12 +115,13 @@
 			children = (
 				3F7F6E89179F12C500CBFC43 /* AppDelegate.h */,
 				3F7F6E8A179F12C500CBFC43 /* AppDelegate.m */,
-				3F55100117A0106C00829498 /* Entities */,
 				3F7F6E92179F12C600CBFC43 /* MainStoryboard.storyboard */,
 				3F7F6E95179F12C600CBFC43 /* ViewController.h */,
 				3F7F6E96179F12C600CBFC43 /* ViewController.m */,
 				3F7F6EA0179F1B3E00CBFC43 /* Player.h */,
 				3F7F6EA1179F1B3E00CBFC43 /* Player.m */,
+				3F55100117A0106C00829498 /* Entities */,
+				3F55100A17A034F600829498 /* img */,
 				3F7F6E81179F12C500CBFC43 /* Supporting Files */,
 			);
 			path = simpleGame;
@@ -186,6 +197,7 @@
 				3F7F6E8F179F12C600CBFC43 /* Default@2x.png in Resources */,
 				3F7F6E91179F12C600CBFC43 /* Default-568h@2x.png in Resources */,
 				3F7F6E94179F12C600CBFC43 /* MainStoryboard.storyboard in Resources */,
+				3F55100917A034F000829498 /* chicken.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Player.h"
 
 @interface ViewController : UIViewController {
 	
@@ -18,6 +19,9 @@
 	int won;
 	NSString *background;
 	int level;
+	
+	NSMutableArray *viewArray;
+	
 }
 - (IBAction)start:(id)sender;
 - (IBAction)next:(id)sender;

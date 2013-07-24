@@ -23,4 +23,6 @@
 	UIViewController *vc;
 }
 
+-(UIView*)draw;
+
 @end
