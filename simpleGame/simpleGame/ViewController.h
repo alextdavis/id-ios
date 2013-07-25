@@ -16,19 +16,24 @@
 	IBOutlet UILabel *scoreLabel;
 	IBOutlet UIButton *startO;
 	
+	NSTimer *timer;
 	
 	int score;
 	int won;
 	NSString *background;
 	int level;
 	NSDictionary *json;
-	NSMutableArray *viewArray;
 	Player *player;
 	
 }
+
+@property (nonatomic, strong) NSMutableArray *viewArray;
+
 - (IBAction)start:(id)sender;
 - (IBAction)next:(id)sender;
 - (IBAction)sendScore:(id)sender;
 - (IBAction)seeScores:(id)sender;
+
+-(void) timerUpdate;
 
 @end

@@ -23,8 +23,13 @@
 @property int jumpt;
 @property UIViewController *vc;
 
--(UIView*)draw;
--(void)killIt:(NSString*)cause
+-(id)initWithParams:(int)xi :(int)yi :(NSString *)srci :(UIViewController*)viewController;
 
+-(UIView*)draw;
+-(void)killIt:(NSString*)cause;
+-(void)resurrect;
+-(void)grounded :(NSMutableArray*)viewArray;
+-(void)fall :(NSMutableArray*)viewArray;
+-(void)collision :(UIImageView)f
 
 @end

@@ -14,6 +14,8 @@
 
 @implementation ViewController
 
+@synthesize viewArray;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -53,7 +55,7 @@
 
 -(void)newGame {
 	background = @"bg";
-	player = [[Player alloc] init];
+	player = [[Player alloc] initWithParams:0 :150 :@"player.tiff" :self];
 	[viewArray removeAllObjects];
 	[viewArray addObject:player.draw];
 	score = 0;
@@ -64,7 +66,7 @@
 }
 
 -(void)loadGame:(int)lvl {
-	//clear Timer
+	//clear initial timer
 	level = lvl;
 	[viewArray removeAllObjects];
 	
@@ -75,7 +77,14 @@
 	player.x = [json objectForKey:[[NSString alloc] initWithFormat:@"%d", level]][@"player"][0];
 	player.y = [json objectForKey:[[NSString alloc] initWithFormat:@"%d", level]][@"player"][1];
 	player.resurrect;
+	background = @"bg";
+	//clear game timer
 	
+	timer = [NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
+}
+
+-(void)timerUpdate {
+//	[player fall];
 }
 
 - (IBAction)start:(id)sender {

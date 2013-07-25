@@ -28,7 +28,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	//NSLog([[NSString alloc] initWithFormat:@"%d", data]);
+
+	NSURL *serverURL = [NSURL URLWithString: [[NSString alloc] initWithFormat:@"http://apps.tinytech.us/R7GNJI27I9/?Method=0x01"]];
+	
+	NSData *serverResponse = [NSData dataWithContentsOfURL:serverURL];
+	
+	NSError *error = nil;
+	
+	NSDictionary* json = [NSJSONSerialization JSONObjectWithData:serverResponse options:kNilOptions error:&error];
+	
+	highScoresName = [json objectForKey:@"Users"];
+	highScoresValue = [json objectForKey:@"Score"];
+	
 	label.text = [[NSString alloc] initWithFormat:@"View 2:%d", data];
 	// Do any additional setup after loading the view.
 }
@@ -42,4 +53,27 @@
 - (IBAction)back:(id)sender {
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return [highScoresName count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+	cell.textLabel.text = [highScoresName objectAtIndex:indexPath.row];
+	UILabel *scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(232,11,68,21)];
+	scoreLabel.text = [highScoresValue objectAtIndex:indexPath.row];
+	[cell addSubview:scoreLabel];
+	
+	return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	
+}
+
+
 @end

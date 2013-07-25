@@ -23,7 +23,7 @@
 @synthesize jumpt;
 @synthesize vc;
 
--(id)init:(int)xi :(int)yi :(NSString *)srci :(UIViewController*)viewController{
+-(id)initWithParams:(int)xi :(int)yi :(NSString *)srci :(UIViewController*)viewController{
 	x = xi;
 	y = yi;
 	width = 100;
@@ -35,6 +35,8 @@
 	jumpa = 0;
 	jumpt = 0;
 	vc = viewController;
+	
+	return self;
 }
 
 
@@ -51,6 +53,38 @@
 
 -(void)resurrect {
 	[vc.view addSubview:playerView];
+}
+
+-(void)grounded:(NSMutableArray *)viewArray; {
+	int undoY = y;
+	y = y + 5;
+	
+}
+
+-(void)fall :(NSMutableArray*)viewArray;
+{
+	int undoY = y;
+	if (y<145) {
+		y = y + 2;
+	}
+	else if (y>145) {
+		y = 145;
+	}
+	y = y - jumpa;
+	if (jumpa >= 1) {
+		jumpa = jumpa - 1;
+	}
+	int undoIt = 0;
+	for (int i = 0; i < [viewArray count]; i++) {
+		//if (collision(viewArray[i])) {
+		//	undoIt += 1;
+		//}
+	}
+	if (undoIt > 0 || dead)
+	{
+		y = undoY;
+	}
+	[self grounded:viewArray];
 }
 
 

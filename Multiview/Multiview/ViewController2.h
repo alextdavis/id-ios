@@ -11,6 +11,8 @@
 @interface ViewController2 : UIViewController {
 	
 	IBOutlet UILabel *label;
+	NSArray *highScoresName;
+	NSArray *highScoresValue;
 }
 
 

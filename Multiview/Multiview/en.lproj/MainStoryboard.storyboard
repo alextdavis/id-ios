@@ -52,11 +52,24 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="View 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcb-Y6-wSF">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="EXA-14-xHJ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="j2k-ac-xYN">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="59s-0Q-teC" id="Pey-2j-MQw"/>
+                                    <outlet property="delegate" destination="59s-0Q-teC" id="vJD-6e-ee0"/>
+                                </connections>
+                            </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpw-dS-3Je">
                                 <items>
                                     <navigationItem title="Scores" id="ukf-Jn-rTz">
@@ -71,20 +84,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="EXA-14-xHJ" firstAttribute="top" secondItem="Kpw-dS-3Je" secondAttribute="bottom" type="default" id="FP3-80-uWe"/>
                             <constraint firstItem="Kpw-dS-3Je" firstAttribute="trailing" secondItem="dmt-Qh-jNi" secondAttribute="trailing" type="default" id="Kbb-kv-SeG"/>
                             <constraint firstItem="Kpw-dS-3Je" firstAttribute="leading" secondItem="dmt-Qh-jNi" secondAttribute="leading" type="default" id="TW2-Ow-awZ"/>
                             <constraint firstItem="Kpw-dS-3Je" firstAttribute="top" secondItem="dmt-Qh-jNi" secondAttribute="top" type="default" id="dWZ-Rj-qpR"/>
-                            <constraint firstItem="Kpw-dS-3Je" firstAttribute="centerX" secondItem="Rcb-Y6-wSF" secondAttribute="centerX" type="default" id="mWz-cj-01x"/>
-                            <constraint firstItem="Rcb-Y6-wSF" firstAttribute="top" secondItem="dmt-Qh-jNi" secondAttribute="top" constant="219" id="moQ-xD-g54"/>
+                            <constraint firstItem="EXA-14-xHJ" firstAttribute="trailing" secondItem="dmt-Qh-jNi" secondAttribute="trailing" type="default" id="dsS-pM-PL3"/>
+                            <constraint firstItem="EXA-14-xHJ" firstAttribute="leading" secondItem="dmt-Qh-jNi" secondAttribute="leading" type="default" id="iS6-qf-pPU"/>
+                            <constraint firstItem="EXA-14-xHJ" firstAttribute="bottom" secondItem="dmt-Qh-jNi" secondAttribute="bottom" type="default" id="xpF-rj-l05"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="label" destination="Rcb-Y6-wSF" id="1hz-Pu-GkA"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVe-2B-4gm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="579" y="166"/>
+            <point key="canvasLocation" x="613" y="42"/>
         </scene>
     </scenes>
     <classes>
