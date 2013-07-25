@@ -14,6 +14,7 @@
 		type=1;
 		width = 347;
 		height = 200;
+		return self;
 	}
 	
 

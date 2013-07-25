@@ -28,8 +28,8 @@
 -(UIView*)draw;
 -(void)killIt:(NSString*)cause;
 -(void)resurrect;
--(void)grounded :(NSMutableArray*)viewArray;
+-(BOOL)grounded :(NSMutableArray*)viewArray;
 -(void)fall :(NSMutableArray*)viewArray;
--(void)collision :(UIImageView)f
+-(BOOL)collision :(UIImageView*)entView;
 
 @end

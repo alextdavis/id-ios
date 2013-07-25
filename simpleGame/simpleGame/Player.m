@@ -55,10 +55,29 @@
 	[vc.view addSubview:playerView];
 }
 
--(void)grounded:(NSMutableArray *)viewArray; {
+-(BOOL)grounded:(NSMutableArray *)viewArray; {
 	int undoY = y;
 	y = y + 5;
-	
+	BOOL out = NO;
+	for (int i = 0; i < [viewArray count]; i++)
+	{
+		if ( [self collision:viewArray[i] ])
+		{
+			jumpt = 0;
+			out = true;
+		}
+	}
+	if (y >= 145)
+	{
+		jumpt = 0;
+		out = true;
+	}
+	y = undoY;
+	return out;
+}
+
+-(BOOL)collision:(UIImageView*)entView {
+	return CGRectIntersectsRect(playerView.bounds, entView.bounds);
 }
 
 -(void)fall :(NSMutableArray*)viewArray;

@@ -12,7 +12,7 @@
 
 
 -(id)init {
-	
+	return self;
 }
 
 

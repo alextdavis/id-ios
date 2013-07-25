@@ -19,13 +19,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	background = @"bg";
+//	background = @"splash.png";
 	
-	NSError *error = nil;
-	NSData *levels = [[NSData alloc] initWithContentsOfFile:@"File"];
-	json = [NSJSONSerialization
-						  JSONObjectWithData: levels
-						  options:kNilOptions error:&error];
+	NSError *error = NULL;
+	NSData *levels = [[NSData alloc] initWithContentsOfFile:@"levels.json"];
+	json = [NSJSONSerialization JSONObjectWithData: levels options:kNilOptions error:&error];
 	
 	
 	// Do any additional setup after loading the view, typically from a nib.
@@ -37,21 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	UITouch *touch = [touches anyObject];
-	CGPoint touchpoint = [touch locationInView:[self view]];
-	if (CGRectContainsPoint(imageViewA.frame, touchpoint)) {
-		statusLabel.text = @"A is Touched!!!";
-	}
-	else if (CGRectContainsPoint(imageViewB.frame, touchpoint)) {
-		statusLabel.text = @"B is Touched!!!";
-	}
-	else
-	{
-		statusLabel.text = @"";
-	}
-}*/
 
 -(void)newGame {
 	background = @"bg";
@@ -74,9 +57,10 @@
 		Entity *ent = [[Entity alloc] init];
 		[viewArray addObject:ent];
 	}
-	player.x = [json objectForKey:[[NSString alloc] initWithFormat:@"%d", level]][@"player"][0];
-	player.y = [json objectForKey:[[NSString alloc] initWithFormat:@"%d", level]][@"player"][1];
-	player.resurrect;
+	player.x = [[json objectForKey:[[NSString alloc] initWithFormat:@"%d", level]][@"player"][0] integerValue];
+	player.y = [[json objectForKey:[[NSString alloc] initWithFormat:@"%d", level]][@"player"][1] integerValue];
+	//[json obj]
+	[player resurrect];
 	background = @"bg";
 	//clear game timer
 	
@@ -88,7 +72,7 @@
 }
 
 - (IBAction)start:(id)sender {
-	self.newGame;
+	[self newGame];
 	
 }
 
