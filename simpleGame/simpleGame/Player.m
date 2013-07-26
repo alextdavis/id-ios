@@ -28,7 +28,7 @@
 	y = yi;
 	width = 100;
 	height = 100;
-	playerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chicken.tiff"]];
+	playerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chicken.png"]];
 	dead = NO;
 	hp = 100;
 	state = 0;
@@ -42,8 +42,8 @@
 
 
 -(UIView*)draw {
-	//[vc.view addSubview:playerView];
-	playerView.bounds = CGRectMake(0, 150, 50, 50);
+	playerView.frame = CGRectMake(0, 150, 50, 50);
+	[vc.view addSubview:playerView];
 	return playerView;
 }
 
@@ -106,6 +106,29 @@
 	[self grounded:viewArray];
 }
 
+-(void)move:(int)d :(NSMutableArray*)viewArray
+{
+	int undoX = x;
+	int undoY = y;
+	if (d == 0)
+	{
+		x = x+2;
+	}
+	if (d == 1)
+	{
+		x = x-2;
+	}
+	int undoIt = 0;
+	for (int i = 0; i< [viewArray count]; i++) {
+		if ([self collision:viewArray[i]]) {
+			undoIt +=1;
+		}
+	}
+	if (undoIt >0 || self.dead){
+		
+	}
+
+}
 
 
 @end

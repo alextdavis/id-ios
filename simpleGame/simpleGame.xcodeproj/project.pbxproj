@@ -7,10 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0FD7B617A2C3EB00C85AD2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7B517A2C3EB00C85AD2 /* background.png */; };
+		3F0FD7CD17A2C5FB00C85AD2 /* barn.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7B717A2C5FB00C85AD2 /* barn.png */; };
+		3F0FD7CE17A2C5FB00C85AD2 /* bush.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7B817A2C5FB00C85AD2 /* bush.png */; };
+		3F0FD7CF17A2C5FB00C85AD2 /* chicken_fried.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7B917A2C5FB00C85AD2 /* chicken_fried.png */; };
+		3F0FD7D017A2C5FB00C85AD2 /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7BA17A2C5FB00C85AD2 /* chicken.png */; };
+		3F0FD7D117A2C5FB00C85AD2 /* death_bot_lasers.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7BB17A2C5FB00C85AD2 /* death_bot_lasers.png */; };
+		3F0FD7D217A2C5FB00C85AD2 /* death_bot.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7BC17A2C5FB00C85AD2 /* death_bot.png */; };
+		3F0FD7D317A2C5FB00C85AD2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7BD17A2C5FB00C85AD2 /* Default-568h@2x.png */; };
+		3F0FD7D417A2C5FB00C85AD2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7BE17A2C5FB00C85AD2 /* Default.png */; };
+		3F0FD7D517A2C5FB00C85AD2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7BF17A2C5FB00C85AD2 /* Default@2x.png */; };
+		3F0FD7D617A2C5FB00C85AD2 /* game_over.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7C017A2C5FB00C85AD2 /* game_over.png */; };
+		3F0FD7D717A2C5FB00C85AD2 /* glyphicons-halflings-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7C117A2C5FB00C85AD2 /* glyphicons-halflings-white.png */; };
+		3F0FD7D817A2C5FB00C85AD2 /* glyphicons-halflings.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7C217A2C5FB00C85AD2 /* glyphicons-halflings.png */; };
+		3F0FD7D917A2C5FB00C85AD2 /* hay_cart-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7C317A2C5FB00C85AD2 /* hay_cart-clear.png */; };
+		3F0FD7DA17A2C5FB00C85AD2 /* hay_cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7C417A2C5FB00C85AD2 /* hay_cart.png */; };
+		3F0FD7DB17A2C5FB00C85AD2 /* next_level.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7C517A2C5FB00C85AD2 /* next_level.png */; };
+		3F0FD7DC17A2C5FB00C85AD2 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7C617A2C5FB00C85AD2 /* rock.png */; };
+		3F0FD7DD17A2C5FB00C85AD2 /* seed_faded.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7C717A2C5FB00C85AD2 /* seed_faded.png */; };
+		3F0FD7DE17A2C5FB00C85AD2 /* seed_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7C817A2C5FB00C85AD2 /* seed_gold.png */; };
+		3F0FD7DF17A2C5FB00C85AD2 /* seed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7C917A2C5FB00C85AD2 /* seed.png */; };
+		3F0FD7E017A2C5FB00C85AD2 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7CA17A2C5FB00C85AD2 /* splash.png */; };
+		3F0FD7E117A2C5FB00C85AD2 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7CB17A2C5FB00C85AD2 /* title.png */; };
+		3F0FD7E217A2C5FB00C85AD2 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0FD7CC17A2C5FB00C85AD2 /* tree.png */; };
 		3F384BCF17A05238005F2D23 /* levels.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F384BCE17A05238005F2D23 /* levels.json */; };
 		3F55100417A0108100829498 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F55100317A0108100829498 /* Entity.m */; };
 		3F55100717A0109D00829498 /* Cart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F55100617A0109D00829498 /* Cart.m */; };
-		3F55100917A034F000829498 /* chicken.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3F55100817A034F000829498 /* chicken.tiff */; };
 		3F7F6E7B179F12C500CBFC43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7F6E7A179F12C500CBFC43 /* UIKit.framework */; };
 		3F7F6E7D179F12C500CBFC43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7F6E7C179F12C500CBFC43 /* Foundation.framework */; };
 		3F7F6E7F179F12C500CBFC43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7F6E7E179F12C500CBFC43 /* CoreGraphics.framework */; };
@@ -26,12 +48,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0FD7B517A2C3EB00C85AD2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		3F0FD7B717A2C5FB00C85AD2 /* barn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barn.png; sourceTree = "<group>"; };
+		3F0FD7B817A2C5FB00C85AD2 /* bush.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bush.png; sourceTree = "<group>"; };
+		3F0FD7B917A2C5FB00C85AD2 /* chicken_fried.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken_fried.png; sourceTree = "<group>"; };
+		3F0FD7BA17A2C5FB00C85AD2 /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
+		3F0FD7BB17A2C5FB00C85AD2 /* death_bot_lasers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = death_bot_lasers.png; sourceTree = "<group>"; };
+		3F0FD7BC17A2C5FB00C85AD2 /* death_bot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = death_bot.png; sourceTree = "<group>"; };
+		3F0FD7BD17A2C5FB00C85AD2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3F0FD7BE17A2C5FB00C85AD2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3F0FD7BF17A2C5FB00C85AD2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3F0FD7C017A2C5FB00C85AD2 /* game_over.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_over.png; sourceTree = "<group>"; };
+		3F0FD7C117A2C5FB00C85AD2 /* glyphicons-halflings-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-halflings-white.png"; sourceTree = "<group>"; };
+		3F0FD7C217A2C5FB00C85AD2 /* glyphicons-halflings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-halflings.png"; sourceTree = "<group>"; };
+		3F0FD7C317A2C5FB00C85AD2 /* hay_cart-clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hay_cart-clear.png"; sourceTree = "<group>"; };
+		3F0FD7C417A2C5FB00C85AD2 /* hay_cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hay_cart.png; sourceTree = "<group>"; };
+		3F0FD7C517A2C5FB00C85AD2 /* next_level.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_level.png; sourceTree = "<group>"; };
+		3F0FD7C617A2C5FB00C85AD2 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
+		3F0FD7C717A2C5FB00C85AD2 /* seed_faded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seed_faded.png; sourceTree = "<group>"; };
+		3F0FD7C817A2C5FB00C85AD2 /* seed_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seed_gold.png; sourceTree = "<group>"; };
+		3F0FD7C917A2C5FB00C85AD2 /* seed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seed.png; sourceTree = "<group>"; };
+		3F0FD7CA17A2C5FB00C85AD2 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		3F0FD7CB17A2C5FB00C85AD2 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		3F0FD7CC17A2C5FB00C85AD2 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		3F384BCE17A05238005F2D23 /* levels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = levels.json; sourceTree = "<group>"; };
 		3F55100217A0108100829498 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		3F55100317A0108100829498 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
 		3F55100517A0109D00829498 /* Cart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cart.h; sourceTree = "<group>"; };
 		3F55100617A0109D00829498 /* Cart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cart.m; sourceTree = "<group>"; };
-		3F55100817A034F000829498 /* chicken.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = chicken.tiff; sourceTree = "<group>"; };
 		3F7F6E77179F12C500CBFC43 /* simpleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7F6E7A179F12C500CBFC43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3F7F6E7C179F12C500CBFC43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,7 +124,29 @@
 		3F55100A17A034F600829498 /* img */ = {
 			isa = PBXGroup;
 			children = (
-				3F55100817A034F000829498 /* chicken.tiff */,
+				3F0FD7B717A2C5FB00C85AD2 /* barn.png */,
+				3F0FD7B817A2C5FB00C85AD2 /* bush.png */,
+				3F0FD7B917A2C5FB00C85AD2 /* chicken_fried.png */,
+				3F0FD7BA17A2C5FB00C85AD2 /* chicken.png */,
+				3F0FD7BB17A2C5FB00C85AD2 /* death_bot_lasers.png */,
+				3F0FD7BC17A2C5FB00C85AD2 /* death_bot.png */,
+				3F0FD7BD17A2C5FB00C85AD2 /* Default-568h@2x.png */,
+				3F0FD7BE17A2C5FB00C85AD2 /* Default.png */,
+				3F0FD7BF17A2C5FB00C85AD2 /* Default@2x.png */,
+				3F0FD7C017A2C5FB00C85AD2 /* game_over.png */,
+				3F0FD7C117A2C5FB00C85AD2 /* glyphicons-halflings-white.png */,
+				3F0FD7C217A2C5FB00C85AD2 /* glyphicons-halflings.png */,
+				3F0FD7C317A2C5FB00C85AD2 /* hay_cart-clear.png */,
+				3F0FD7C417A2C5FB00C85AD2 /* hay_cart.png */,
+				3F0FD7C517A2C5FB00C85AD2 /* next_level.png */,
+				3F0FD7C617A2C5FB00C85AD2 /* rock.png */,
+				3F0FD7C717A2C5FB00C85AD2 /* seed_faded.png */,
+				3F0FD7C817A2C5FB00C85AD2 /* seed_gold.png */,
+				3F0FD7C917A2C5FB00C85AD2 /* seed.png */,
+				3F0FD7CA17A2C5FB00C85AD2 /* splash.png */,
+				3F0FD7CB17A2C5FB00C85AD2 /* title.png */,
+				3F0FD7CC17A2C5FB00C85AD2 /* tree.png */,
+				3F0FD7B517A2C3EB00C85AD2 /* background.png */,
 			);
 			name = img;
 			sourceTree = "<group>";
@@ -200,8 +266,30 @@
 				3F7F6E8F179F12C600CBFC43 /* Default@2x.png in Resources */,
 				3F7F6E91179F12C600CBFC43 /* Default-568h@2x.png in Resources */,
 				3F7F6E94179F12C600CBFC43 /* MainStoryboard.storyboard in Resources */,
-				3F55100917A034F000829498 /* chicken.tiff in Resources */,
 				3F384BCF17A05238005F2D23 /* levels.json in Resources */,
+				3F0FD7B617A2C3EB00C85AD2 /* background.png in Resources */,
+				3F0FD7CD17A2C5FB00C85AD2 /* barn.png in Resources */,
+				3F0FD7CE17A2C5FB00C85AD2 /* bush.png in Resources */,
+				3F0FD7CF17A2C5FB00C85AD2 /* chicken_fried.png in Resources */,
+				3F0FD7D017A2C5FB00C85AD2 /* chicken.png in Resources */,
+				3F0FD7D117A2C5FB00C85AD2 /* death_bot_lasers.png in Resources */,
+				3F0FD7D217A2C5FB00C85AD2 /* death_bot.png in Resources */,
+				3F0FD7D317A2C5FB00C85AD2 /* Default-568h@2x.png in Resources */,
+				3F0FD7D417A2C5FB00C85AD2 /* Default.png in Resources */,
+				3F0FD7D517A2C5FB00C85AD2 /* Default@2x.png in Resources */,
+				3F0FD7D617A2C5FB00C85AD2 /* game_over.png in Resources */,
+				3F0FD7D717A2C5FB00C85AD2 /* glyphicons-halflings-white.png in Resources */,
+				3F0FD7D817A2C5FB00C85AD2 /* glyphicons-halflings.png in Resources */,
+				3F0FD7D917A2C5FB00C85AD2 /* hay_cart-clear.png in Resources */,
+				3F0FD7DA17A2C5FB00C85AD2 /* hay_cart.png in Resources */,
+				3F0FD7DB17A2C5FB00C85AD2 /* next_level.png in Resources */,
+				3F0FD7DC17A2C5FB00C85AD2 /* rock.png in Resources */,
+				3F0FD7DD17A2C5FB00C85AD2 /* seed_faded.png in Resources */,
+				3F0FD7DE17A2C5FB00C85AD2 /* seed_gold.png in Resources */,
+				3F0FD7DF17A2C5FB00C85AD2 /* seed.png in Resources */,
+				3F0FD7E017A2C5FB00C85AD2 /* splash.png in Resources */,
+				3F0FD7E117A2C5FB00C85AD2 /* title.png in Resources */,
+				3F0FD7E217A2C5FB00C85AD2 /* tree.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

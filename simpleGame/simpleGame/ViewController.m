@@ -21,9 +21,9 @@
     [super viewDidLoad];
 //	background = @"splash.png";
 	
-	NSError *error = NULL;
-	NSData *levels = [[NSData alloc] initWithContentsOfFile:@"levels.json"];
-	json = [NSJSONSerialization JSONObjectWithData: levels options:kNilOptions error:&error];
+//	NSError *error = NULL;
+//	NSData *levels = [[NSData alloc] initWithContentsOfFile:@"levels.json"];
+//	json = [NSJSONSerialization JSONObjectWithData: levels options:kNilOptions error:&error];
 	
 	
 	// Do any additional setup after loading the view, typically from a nib.
@@ -37,15 +37,15 @@
 
 
 -(void)newGame {
-	background = @"bg";
-	player = [[Player alloc] initWithParams:0 :150 :@"player.tiff" :self];
-	[viewArray removeAllObjects];
-	[viewArray addObject:player.draw];
+	NSLog(@"this");
+	backView.image = [UIImage imageNamed:@"background.png"];
+	player = [[Player alloc] initWithParams:0 :150 :@"player.png" :self];
+	[player draw];
 	score = 0;
 	won = 0;
 	
 	//clear Timer
-	startO.titleLabel.text = @"Reset";
+	[startO setTitle:@"Reset" forState:UIControlStateNormal];
 }
 
 -(void)loadGame:(int)lvl {
@@ -61,7 +61,6 @@
 	player.y = [[json objectForKey:[[NSString alloc] initWithFormat:@"%d", level]][@"player"][1] integerValue];
 	//[json obj]
 	[player resurrect];
-	background = @"bg";
 	//clear game timer
 	
 	timer = [NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];

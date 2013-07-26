@@ -31,5 +31,6 @@
 -(BOOL)grounded :(NSMutableArray*)viewArray;
 -(void)fall :(NSMutableArray*)viewArray;
 -(BOOL)collision :(UIImageView*)entView;
+-(void)move :(int)d;
 
 @end
