@@ -18,4 +18,7 @@
 	
 }
 
+-(void)draw :(NSMutableArray*)viewArray;
+
+
 @end

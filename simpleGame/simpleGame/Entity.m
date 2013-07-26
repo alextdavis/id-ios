@@ -15,5 +15,8 @@
 	return self;
 }
 
+-(void)draw:(NSMutableArray *)viewArray {
+	
+}
 
 @end
