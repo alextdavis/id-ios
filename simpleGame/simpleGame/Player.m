@@ -47,6 +47,12 @@
 	return playerView;
 }
 
+-(UIView*)redraw {
+	[playerView setFrame:CGRectMake(x, y, 50, 50)];
+//	playerView.frame = CGRectMake(x, y, 50, 50);
+	return playerView;
+}
+
 -(void)killIt:(NSString*)cause {
 	[playerView removeFromSuperview];
 }
@@ -112,11 +118,11 @@
 	int undoY = y;
 	if (d == 0)
 	{
-		x = x+2;
+		x +=2;
 	}
 	if (d == 1)
 	{
-		x = x-2;
+		x -=2;
 	}
 	int undoIt = 0;
 	for (int i = 0; i< [viewArray count]; i++) {
@@ -124,11 +130,18 @@
 			undoIt +=1;
 		}
 	}
-	if (undoIt >0 || self.dead){
-		
+	if (undoIt >0 || dead){
+		x = undoX;
+		y = undoY;
 	}
-
 }
 
+-(void)jump:(NSMutableArray*)viewArray {
+	[self grounded:viewArray];
+	if (jumpt < 2) {
+		jumpa = 15;
+		jumpt++;
+	}
+}
 
 @end

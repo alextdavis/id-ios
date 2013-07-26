@@ -16,6 +16,9 @@
 
 @synthesize viewArray;
 
+BOOL isRD = NO;
+BOOL isLD = NO;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -24,7 +27,17 @@
 //	NSError *error = NULL;
 //	NSData *levels = [[NSData alloc] initWithContentsOfFile:@"levels.json"];
 //	json = [NSJSONSerialization JSONObjectWithData: levels options:kNilOptions error:&error];
+//	NSString *jsonData = [[NSString alloc] initWithContentsOfFile:@"levels.json" encoding:NSUTF8StringEncoding error:nil];
+
+	NSError *anError;
 	
+	NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"levels" withExtension:@"json"];
+	
+	NSData *someData = [[NSData alloc] initWithContentsOfURL:fileURL];
+	
+	json = [NSJSONSerialization JSONObjectWithData:someData options:kNilOptions error:nil];
+	
+	NSLog(@"Say stuff : %@", [json objectForKey:@"7"]);
 	
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -39,6 +52,7 @@
 -(void)newGame {
 	NSLog(@"this");
 	backView.image = [UIImage imageNamed:@"background.png"];
+	[player killIt:@"reset"];
 	player = [[Player alloc] initWithParams:0 :150 :@"player.png" :self];
 	[player draw];
 	score = 0;
@@ -63,16 +77,27 @@
 	[player resurrect];
 	//clear game timer
 	
-	timer = [NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
+	timer = [NSTimer scheduledTimerWithTimeInterval:.01 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
 }
 
 -(void)timerUpdate {
-//	[player fall];
+	[player redraw];
+	[player fall:viewArray];
+	
+	if (isRD) {
+		[player move:0 :viewArray];
+	}
+	if (isLD) {
+		[player move:1 :viewArray];
+	}
 }
 
 - (IBAction)start:(id)sender {
+	[viewArray removeAllObjects];
+	[timer invalidate];
+	timer = nil;
 	[self newGame];
-	
+	[self loadGame:1];
 }
 
 - (IBAction)next:(id)sender {
@@ -82,5 +107,25 @@
 }
 
 - (IBAction)seeScores:(id)sender {
+}
+
+- (IBAction)jump:(id)sender {
+	[player jump:viewArray];
+}
+
+- (IBAction)rightDn:(id)sender {
+	isRD = YES;
+}
+
+- (IBAction)leftDn:(id)sender {
+	isLD = YES;
+}
+
+- (IBAction)rightUp:(id)sender {
+	isRD = NO;
+}
+
+- (IBAction)leftUp:(id)sender {
+	isLD = NO;
 }
 @end

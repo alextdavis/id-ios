@@ -26,11 +26,13 @@
 -(id)initWithParams:(int)xi :(int)yi :(NSString *)srci :(UIViewController*)viewController;
 
 -(UIView*)draw;
+-(UIView*)redraw;
 -(void)killIt:(NSString*)cause;
 -(void)resurrect;
 -(BOOL)grounded :(NSMutableArray*)viewArray;
 -(void)fall :(NSMutableArray*)viewArray;
 -(BOOL)collision :(UIImageView*)entView;
--(void)move :(int)d;
+-(void)move :(int)d :(NSMutableArray*)viewArray;
+-(void)jump :(NSMutableArray*)viewArray;
 
 @end

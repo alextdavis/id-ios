@@ -33,6 +33,11 @@
 - (IBAction)next:(id)sender;
 - (IBAction)sendScore:(id)sender;
 - (IBAction)seeScores:(id)sender;
+- (IBAction)jump:(id)sender;
+- (IBAction)rightDn:(id)sender;
+- (IBAction)leftDn:(id)sender;
+- (IBAction)rightUp:(id)sender;
+- (IBAction)leftUp:(id)sender;
 
 -(void) timerUpdate;
 

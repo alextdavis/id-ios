@@ -82,29 +82,79 @@
                                     <action selector="seeScores:" destination="2" eventType="touchUpInside" id="071-VJ-J72"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOo-3I-gjg">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="&lt;--">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftDn:" destination="2" eventType="touchDown" id="JMm-Hu-W9C"/>
+                                    <action selector="leftUp:" destination="2" eventType="touchUpInside" id="amV-CK-Jd5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Dz-Gw-F2H">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="-->">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightDn:" destination="2" eventType="touchDown" id="EFj-S9-V00"/>
+                                    <action selector="rightUp:" destination="2" eventType="touchUpInside" id="m2a-A3-xhV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEn-rj-rQL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="KtD-vp-dQG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Jump">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jump:" destination="2" eventType="touchDown" id="qJc-lL-sgC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="il3-0Z-TjM" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="1w9-pi-2sN"/>
                             <constraint firstItem="gdZ-mO-3ox" firstAttribute="top" secondItem="aOZ-JS-N5v" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4Xc-ez-XJ9"/>
                             <constraint firstItem="aOZ-JS-N5v" firstAttribute="top" secondItem="3" secondAttribute="top" constant="122" id="7zj-ys-Dl8"/>
+                            <constraint firstItem="7Dz-Gw-F2H" firstAttribute="leading" secondItem="LOo-3I-gjg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="AdI-Sl-EcY"/>
+                            <constraint firstItem="AEn-rj-rQL" firstAttribute="baseline" secondItem="il3-0Z-TjM" secondAttribute="baseline" type="default" id="Ade-0q-BaW"/>
                             <constraint firstItem="gdZ-mO-3ox" firstAttribute="trailing" secondItem="aOZ-JS-N5v" secondAttribute="trailing" type="default" id="Ezy-ff-BId"/>
                             <constraint firstItem="2hg-Ye-Da0" firstAttribute="top" secondItem="3" secondAttribute="top" constant="7" id="Ga0-BG-Y7c"/>
                             <constraint firstItem="3GT-XD-Jmo" firstAttribute="top" secondItem="3" secondAttribute="top" constant="63" id="I36-py-0BG"/>
                             <constraint firstItem="3GT-XD-Jmo" firstAttribute="trailing" secondItem="2hg-Ye-Da0" secondAttribute="trailing" type="default" id="JXb-7f-kVE"/>
                             <constraint firstItem="TfL-3h-Hz2" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Knt-y4-Q5f"/>
                             <constraint firstItem="2hg-Ye-Da0" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="PVi-up-adz"/>
+                            <constraint firstItem="7Dz-Gw-F2H" firstAttribute="baseline" secondItem="LOo-3I-gjg" secondAttribute="baseline" type="default" id="QMd-Pw-Rlz"/>
                             <constraint firstItem="gdZ-mO-3ox" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="TQ5-OZ-YVx"/>
                             <constraint firstItem="aOZ-JS-N5v" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="TTo-lY-N5i"/>
                             <constraint firstItem="TfL-3h-Hz2" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="bea-cJ-YdJ"/>
+                            <constraint firstItem="LOo-3I-gjg" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dm5-TM-qCa"/>
+                            <constraint firstItem="AEn-rj-rQL" firstAttribute="baseline" secondItem="7Dz-Gw-F2H" secondAttribute="baseline" type="default" id="dsP-L5-kF5"/>
                             <constraint firstItem="3GT-XD-Jmo" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="erT-vO-2f7"/>
                             <constraint firstItem="cOE-gC-5qB" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="f1W-md-5Vz"/>
+                            <constraint firstAttribute="bottom" secondItem="LOo-3I-gjg" secondAttribute="bottom" constant="13" id="jCD-Zs-Nth"/>
                             <constraint firstItem="cOE-gC-5qB" firstAttribute="trailing" secondItem="gdZ-mO-3ox" secondAttribute="trailing" type="default" id="kAb-ka-06S"/>
                             <constraint firstItem="il3-0Z-TjM" firstAttribute="trailing" secondItem="cOE-gC-5qB" secondAttribute="trailing" type="default" id="ma6-sN-BCq"/>
                             <constraint firstItem="TfL-3h-Hz2" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="o2M-Rc-uYK"/>
                             <constraint firstItem="3GT-XD-Jmo" firstAttribute="trailing" secondItem="aOZ-JS-N5v" secondAttribute="trailing" type="default" id="pFn-hM-25u"/>
                             <constraint firstItem="il3-0Z-TjM" firstAttribute="top" secondItem="cOE-gC-5qB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qoD-ix-IC3"/>
-                            <constraint firstAttribute="bottom" secondItem="il3-0Z-TjM" secondAttribute="bottom" constant="13" id="sMS-1d-OVZ"/>
+                            <constraint firstItem="AEn-rj-rQL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="198" id="u7P-4c-cuV"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -119,6 +169,28 @@
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="jump:"/>
+                <relationship kind="action" name="leftDn:"/>
+                <relationship kind="action" name="leftUp:"/>
+                <relationship kind="action" name="next:"/>
+                <relationship kind="action" name="rightDn:"/>
+                <relationship kind="action" name="rightUp:"/>
+                <relationship kind="action" name="seeScores:"/>
+                <relationship kind="action" name="sendScore:"/>
+                <relationship kind="action" name="start:"/>
+                <relationship kind="outlet" name="backView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="startO" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
