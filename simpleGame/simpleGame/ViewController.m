@@ -14,6 +14,7 @@
 
 @implementation ViewController
 
+@synthesize viewArray;
 
 BOOL isRD = NO;
 BOOL isLD = NO;
@@ -40,7 +41,7 @@ BOOL isLD = NO;
 	NSData *someData2 = [[NSData alloc] initWithContentsOfURL:fileURL2];
 	ents = [NSJSONSerialization JSONObjectWithData:someData2 options:kNilOptions error:nil];
 	
-	NSLog(@"Say stuff : %@", [json objectForKey:@"7"]);
+//	NSLog(@"Say stuff : %@", [json objectForKey:@"7"]);
 	
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -53,12 +54,11 @@ BOOL isLD = NO;
 
 
 -(void)newGame {
-	NSLog(@"this");
 	backView.image = [UIImage imageNamed:@"background.png"];
 	[player killIt:@"reset"];
 	player = [[Player alloc] initWithParams:0 :150 :self];
 	[player draw];
-	score = 0;
+	player.score = 0;
 	won = 0;
 	
 	//clear Timer
@@ -73,13 +73,13 @@ BOOL isLD = NO;
 	NSArray *levelEntArr = levelDict[@"ent"];
 
 	
-	NSLog(@" # %@", levelEntArr[1][1]);
+//	NSLog(@" # %@", levelEntArr[1][1]);
 	
 	for (int i = 1; i<[levelEntArr count]; i++) {
 		Entity *ent = [[Entity alloc] initWithParams:levelEntArr[i][0] :[levelEntArr[i][1] integerValue]:[levelEntArr[i][2] integerValue] :self :ents];
 		[ent draw];
 		[viewArray addObject:ent];
-		NSLog(@"stuff:%@", viewArray);
+//		NSLog(@"stuff:%@", viewArray);
 	}
 	player.x = [[json objectForKey:[[NSString alloc] initWithFormat:@"%d", level]][@"player"][0] integerValue];
 	player.y = [[json objectForKey:[[NSString alloc] initWithFormat:@"%d", level]][@"player"][1] integerValue];
@@ -99,6 +99,13 @@ BOOL isLD = NO;
 	}
 	if (isLD) {
 		[player move:1 :viewArray];
+	}
+	
+	if (player.winLvl) {
+		[self loadGame:level++];
+	}
+	if (player.dead) {
+		[self loadGame:level];
 	}
 }
 

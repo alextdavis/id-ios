@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "Entity.h"
-#import "globalVars.h"
 
 
 @interface Player : NSObject
@@ -19,6 +18,7 @@
 @property int height;
 @property UIImageView *playerView;
 @property BOOL dead;
+@property BOOL winLvl;
 @property int score;
 @property int level;
 @property int state;
@@ -34,7 +34,7 @@
 -(void)resurrect;
 -(BOOL)grounded :(NSMutableArray*)viewArray;
 -(void)fall :(NSMutableArray*)viewArray;
--(BOOL)collision :(UIImageView*)entView;
+-(BOOL)collision :(UIImageView*)entView :(NSMutableArray*)viewArray;
 -(void)move :(int)d :(NSMutableArray*)viewArray;
 -(void)jump :(NSMutableArray*)viewArray;
 

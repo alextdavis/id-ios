@@ -16,6 +16,7 @@
 @synthesize height;
 @synthesize playerView;
 @synthesize dead;
+@synthesize winLvl;
 @synthesize score;
 @synthesize level;
 @synthesize state;
@@ -30,6 +31,7 @@
 	height = 100;
 	playerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chicken.png"]];
 	dead = NO;
+	winLvl = NO;
 	state = 0;
 	jumpa = 0;
 	jumpt = 0;
@@ -66,7 +68,7 @@
 	BOOL out = NO;
 	for (int i = 0; i < [viewArray count]; i++)
 	{
-		if ( [self collision:viewArray[i] ])
+		if ( [self collision:viewArray[i]:viewArray ])
 		{
 			jumpt = 0;
 			out = true;
@@ -81,7 +83,7 @@
 	return out;
 }
 
--(BOOL)collision:(Entity*)ent {
+-(BOOL)collision:(Entity*)ent :(NSMutableArray*)viewArray {
 	CGRect pFrame = [playerView frame];
 	CGRect eFrame = [((UIImageView*)ent.entView) frame];
 	BOOL outputting = CGRectIntersectsRect(pFrame, eFrame);
@@ -89,11 +91,23 @@
 
 	if (outputting && [ent.type isEqual: @"deco"]) {
 		outputting = NO;
+		NSLog(@"deco");
 	}
 	else if (outputting && [ent.type isEqual: @"seed"]) {
 		self.score++;
 		[ent.entView removeFromSuperview];
-		[]
+		[viewArray removeObject:ent];
+		NSLog(@"seed");
+	}
+	else if (outputting && [ent.type isEqual: @"seed_gold"]) {
+		score += 5;
+		winLvl = YES;
+		NSLog(@"gold");
+	}
+	else if (outputting && [ent.type isEqual: @"bot"]) {
+		score -= 5;
+		dead = YES;
+		NSLog(@"bot");
 	}
 		
 	return outputting;
@@ -114,7 +128,7 @@
 	}
 	int undoIt = 0;
 	for (int i = 0; i < [viewArray count]; i++) {
-		if ([self collision:viewArray[i]]) {
+		if ([self collision:viewArray[i] :viewArray]) {
 			undoIt += 1;
 		}
 	}
@@ -139,7 +153,7 @@
 	}
 	int undoIt = 0;
 	for (int i = 0; i< [viewArray count]; i++) {
-		if ([self collision:viewArray[i]]) {
+		if ([self collision:viewArray[i] :viewArray]) {
 			undoIt +=1;
 		}
 	}

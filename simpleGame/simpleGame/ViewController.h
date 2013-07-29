@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Player.h"
 #import "Entity.h"
-#import "globalVars.h:
 
 @interface ViewController : UIViewController {
 	
@@ -28,7 +27,7 @@
 	
 }
 
-//@property (nonatomic, strong) NSMutableArray *viewArray;
+@property (nonatomic, strong) NSMutableArray *viewArray;
 
 - (IBAction)start:(id)sender;
 - (IBAction)next:(id)sender;

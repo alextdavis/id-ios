@@ -22,7 +22,7 @@
 	entView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[[NSString alloc]initWithFormat:@"%@.png", type]]];
 	width = [[ents objectForKey:type][@"width"] integerValue];
 	height = [[ents objectForKey:type][@"height"] integerValue];
-	NSLog(@"thisis: %@", ents);
+//	NSLog(@"thisis: %@", ents);
 	return self;
 }
 
@@ -30,7 +30,7 @@
 -(void)draw {
 	[entView setFrame:CGRectMake(x, y, width, height)];
 	[vc.view addSubview:entView];
-	NSLog(@"x: %d", self->x);
+//	NSLog(@"x: %d", self->x);
 //	return entView;
 }
 

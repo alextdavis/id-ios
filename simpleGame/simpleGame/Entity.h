@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "globalVars.h"
 
 @interface Entity : NSObject{
 	int x;
