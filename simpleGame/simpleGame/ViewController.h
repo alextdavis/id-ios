@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Player.h"
 #import "Entity.h"
+#import "globalVars.h:
 
 @interface ViewController : UIViewController {
 	
@@ -18,16 +19,16 @@
 	
 	NSTimer *timer;
 	
-	int score;
 	int won;
 	NSString *background;
 	int level;
 	NSDictionary *json;
+	NSDictionary *ents;
 	Player *player;
 	
 }
 
-@property (nonatomic, strong) NSMutableArray *viewArray;
+//@property (nonatomic, strong) NSMutableArray *viewArray;
 
 - (IBAction)start:(id)sender;
 - (IBAction)next:(id)sender;

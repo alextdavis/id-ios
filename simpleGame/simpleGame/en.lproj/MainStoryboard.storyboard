@@ -169,28 +169,6 @@
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="jump:"/>
-                <relationship kind="action" name="leftDn:"/>
-                <relationship kind="action" name="leftUp:"/>
-                <relationship kind="action" name="next:"/>
-                <relationship kind="action" name="rightDn:"/>
-                <relationship kind="action" name="rightUp:"/>
-                <relationship kind="action" name="seeScores:"/>
-                <relationship kind="action" name="sendScore:"/>
-                <relationship kind="action" name="start:"/>
-                <relationship kind="outlet" name="backView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="startO" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

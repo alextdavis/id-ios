@@ -7,18 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "globalVars.h"
 
 @interface Entity : NSObject{
 	int x;
 	int y;
-	UIImageView *entView;
-	int type;
 	int width;
 	int height;
-	
+	UIViewController *vc;
+	NSDictionary *ents;
+	BOOL ate;
 }
 
--(void)draw :(NSMutableArray*)viewArray;
+@property (nonatomic, strong) UIImageView *entView;
+@property (nonatomic, strong) NSString *type;
+
+-(id)initWithParams:(NSString*)typei :(int) xi :(int) yi :(UIViewController*)viewController :(NSDictionary*)ents;
+-(void)draw;
 
 
 @end

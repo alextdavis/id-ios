@@ -11,10 +11,10 @@
 @implementation Cart
 	
 	-(id)init{
-		type=1;
-		width = 347;
-		height = 200;
-		return self;
+//		type=1;
+//		width = 347;
+//		height = 200;
+//		return self;
 	}
 	
 

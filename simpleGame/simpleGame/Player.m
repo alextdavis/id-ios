@@ -16,21 +16,20 @@
 @synthesize height;
 @synthesize playerView;
 @synthesize dead;
-@synthesize hp;
+@synthesize score;
 @synthesize level;
 @synthesize state;
 @synthesize jumpa;
 @synthesize jumpt;
 @synthesize vc;
 
--(id)initWithParams:(int)xi :(int)yi :(NSString *)srci :(UIViewController*)viewController{
+-(id)initWithParams:(int)xi :(int)yi :(UIViewController*)viewController{
 	x = xi;
 	y = yi;
 	width = 100;
 	height = 100;
 	playerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chicken.png"]];
 	dead = NO;
-	hp = 100;
 	state = 0;
 	jumpa = 0;
 	jumpt = 0;
@@ -42,7 +41,7 @@
 
 
 -(UIView*)draw {
-	playerView.frame = CGRectMake(0, 150, 50, 50);
+	[playerView setFrame:CGRectMake(0, 150, 50, 50)];
 	[vc.view addSubview:playerView];
 	return playerView;
 }
@@ -82,8 +81,22 @@
 	return out;
 }
 
--(BOOL)collision:(UIImageView*)entView {
-	return CGRectIntersectsRect(playerView.bounds, entView.bounds);
+-(BOOL)collision:(Entity*)ent {
+	CGRect pFrame = [playerView frame];
+	CGRect eFrame = [((UIImageView*)ent.entView) frame];
+	BOOL outputting = CGRectIntersectsRect(pFrame, eFrame);
+	//NSLog(@"%d", outputting);
+
+	if (outputting && [ent.type isEqual: @"deco"]) {
+		outputting = NO;
+	}
+	else if (outputting && [ent.type isEqual: @"seed"]) {
+		self.score++;
+		[ent.entView removeFromSuperview];
+		[]
+	}
+		
+	return outputting;
 }
 
 -(void)fall :(NSMutableArray*)viewArray;
@@ -101,9 +114,9 @@
 	}
 	int undoIt = 0;
 	for (int i = 0; i < [viewArray count]; i++) {
-		//if (collision(viewArray[i])) {
-		//	undoIt += 1;
-		//}
+		if ([self collision:viewArray[i]]) {
+			undoIt += 1;
+		}
 	}
 	if (undoIt > 0 || dead)
 	{

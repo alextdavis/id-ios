@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Entity.h"
+#import "globalVars.h"
+
 
 @interface Player : NSObject
 
@@ -16,14 +19,14 @@
 @property int height;
 @property UIImageView *playerView;
 @property BOOL dead;
-@property int hp;
+@property int score;
 @property int level;
 @property int state;
 @property int jumpa;
 @property int jumpt;
 @property UIViewController *vc;
 
--(id)initWithParams:(int)xi :(int)yi :(NSString *)srci :(UIViewController*)viewController;
+-(id)initWithParams:(int)xi :(int)yi :(UIViewController*)viewController;
 
 -(UIView*)draw;
 -(UIView*)redraw;
