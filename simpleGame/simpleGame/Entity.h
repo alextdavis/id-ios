@@ -13,7 +13,7 @@
 	int y;
 	int width;
 	int height;
-	UIViewController *vc;
+	UIImageView *vc;
 	NSDictionary *ents;
 	BOOL ate;
 }
@@ -21,7 +21,7 @@
 @property (nonatomic, strong) UIImageView *entView;
 @property (nonatomic, strong) NSString *type;
 
--(id)initWithParams:(NSString*)typei :(int) xi :(int) yi :(UIViewController*)viewController :(NSDictionary*)ents;
+-(id)initWithParams:(NSString*)typei :(int) xi :(int) yi :(UIImageView*)backView :(NSDictionary*)ents;
 -(void)draw;
 
 

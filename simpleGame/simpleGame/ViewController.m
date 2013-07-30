@@ -15,6 +15,7 @@
 @implementation ViewController
 
 @synthesize viewArray;
+@synthesize backView;
 
 BOOL isRD = NO;
 BOOL isLD = NO;
@@ -30,9 +31,7 @@ BOOL isLD = NO;
 //	NSString *jsonData = [[NSString alloc] initWithContentsOfFile:@"levels.json" encoding:NSUTF8StringEncoding error:nil];
 
 	viewArray = [[NSMutableArray alloc]init];
-	
-	NSError *anError;
-	
+		
 	NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"levels" withExtension:@"json"];
 	NSData *someData = [[NSData alloc] initWithContentsOfURL:fileURL];
 	json = [NSJSONSerialization JSONObjectWithData:someData options:kNilOptions error:nil];
@@ -56,17 +55,22 @@ BOOL isLD = NO;
 -(void)newGame {
 	backView.image = [UIImage imageNamed:@"background.png"];
 	[player killIt:@"reset"];
+    player = nil;
 	player = [[Player alloc] initWithParams:0 :150 :self];
 	[player draw];
 	player.score = 0;
 	won = 0;
-	
+	for (UIView *subview in [backView subviews]) {
+        [subview removeFromSuperview];
+    }
 	//clear Timer
 	[startO setTitle:@"Reset" forState:UIControlStateNormal];
 }
 
 -(void)loadGame:(int)lvl {
 	//clear initial timer
+    player.dead = NO;
+    
 	level = lvl;
 	[viewArray removeAllObjects];
 	NSDictionary *levelDict = [json objectForKey:[[NSString alloc] initWithFormat:@"%d",level]];
@@ -76,7 +80,7 @@ BOOL isLD = NO;
 //	NSLog(@" # %@", levelEntArr[1][1]);
 	
 	for (int i = 1; i<[levelEntArr count]; i++) {
-		Entity *ent = [[Entity alloc] initWithParams:levelEntArr[i][0] :[levelEntArr[i][1] integerValue]:[levelEntArr[i][2] integerValue] :self :ents];
+		Entity *ent = [[Entity alloc] initWithParams:levelEntArr[i][0] :[levelEntArr[i][1] integerValue]:[levelEntArr[i][2] integerValue] :backView :ents];
 		[ent draw];
 		[viewArray addObject:ent];
 //		NSLog(@"stuff:%@", viewArray);
@@ -86,7 +90,8 @@ BOOL isLD = NO;
 	//[json obj]
 	[player resurrect];
 	//clear game timer
-	
+    [timer invalidate];
+	timer = nil;
 	timer = [NSTimer scheduledTimerWithTimeInterval:.01 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
 }
 

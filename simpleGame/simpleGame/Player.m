@@ -65,22 +65,22 @@
 -(BOOL)grounded:(NSMutableArray *)viewArray; {
 	int undoY = y;
 	y = y + 5;
-	BOOL out = NO;
+	BOOL outputting = NO;
 	for (int i = 0; i < [viewArray count]; i++)
 	{
 		if ( [self collision:viewArray[i]:viewArray ])
 		{
 			jumpt = 0;
-			out = true;
+			outputting = true;
 		}
 	}
 	if (y >= 145)
 	{
 		jumpt = 0;
-		out = true;
+		outputting = true;
 	}
 	y = undoY;
-	return out;
+	return outputting;
 }
 
 -(BOOL)collision:(Entity*)ent :(NSMutableArray*)viewArray {
@@ -129,7 +129,7 @@
 	int undoIt = 0;
 	for (int i = 0; i < [viewArray count]; i++) {
 		if ([self collision:viewArray[i] :viewArray]) {
-			undoIt += 1;
+			undoIt++;
 		}
 	}
 	if (undoIt > 0 || dead)
@@ -154,10 +154,11 @@
 	int undoIt = 0;
 	for (int i = 0; i< [viewArray count]; i++) {
 		if ([self collision:viewArray[i] :viewArray]) {
-			undoIt +=1;
+			undoIt++;
 		}
 	}
 	if (undoIt >0 || dead){
+        
 		x = undoX;
 		y = undoY;
 	}

@@ -12,7 +12,7 @@
 
 @interface ViewController : UIViewController {
 	
-	IBOutlet UIImageView *backView;
+//	IBOutlet UIImageView *backView;
 	IBOutlet UILabel *scoreLabel;
 	IBOutlet UIButton *startO;
 	
@@ -28,6 +28,7 @@
 }
 
 @property (nonatomic, strong) NSMutableArray *viewArray;
+@property (nonatomic, strong) IBOutlet UIImageView *backView;
 
 - (IBAction)start:(id)sender;
 - (IBAction)next:(id)sender;
