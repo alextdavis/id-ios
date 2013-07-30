@@ -33,7 +33,7 @@ BOOL isLD = NO;
 	viewArray = [[NSMutableArray alloc]init];
 	
 	NSString *deviceType = [UIDevice currentDevice].model;
-	if ([deviceType isEqualToString:@"iPad"]) {
+	if ([deviceType isEqualToString:@"iPad"]||[deviceType isEqualToString:@"iPad Simulator"]) {
 		NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"levels@2x" withExtension:@"json"];
 		NSData *someData = [[NSData alloc] initWithContentsOfURL:fileURL];
 		json = [NSJSONSerialization JSONObjectWithData:someData options:kNilOptions error:nil];
@@ -42,7 +42,7 @@ BOOL isLD = NO;
 		NSData *someData2 = [[NSData alloc] initWithContentsOfURL:fileURL2];
 		ents = [NSJSONSerialization JSONObjectWithData:someData2 options:kNilOptions error:nil];
 	}
-	else if ([deviceType isEqualToString:@"iPhone"]) {
+	else if ([deviceType isEqualToString:@"iPhone"]||[deviceType isEqualToString:@"iPhone Simulator"]) {
 		NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"levels@1x" withExtension:@"json"];
 		NSData *someData = [[NSData alloc] initWithContentsOfURL:fileURL];
 		json = [NSJSONSerialization JSONObjectWithData:someData options:kNilOptions error:nil];
