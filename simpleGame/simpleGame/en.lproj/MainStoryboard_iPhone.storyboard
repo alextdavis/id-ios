@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -14,7 +14,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TfL-3h-Hz2">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="zm3-MV-lL7"/>
+                                    <constraint firstAttribute="width" constant="400" id="3lq-Jp-D22"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hg-Ye-Da0">
@@ -31,19 +31,6 @@
                                 </state>
                                 <connections>
                                     <action selector="start:" destination="2" eventType="touchUpInside" id="xMq-Vv-Ecy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GT-XD-Jmo">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="next:" destination="2" eventType="touchUpInside" id="wlw-UF-uMs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOZ-JS-N5v">
@@ -126,18 +113,30 @@
                                     <action selector="jump:" destination="2" eventType="touchDown" id="qJc-lL-sgC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTe-NQ-Vqc">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="GetLvl">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xTe-NQ-Vqc" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="0sT-fC-dp0"/>
                             <constraint firstItem="il3-0Z-TjM" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="1w9-pi-2sN"/>
+                            <constraint firstItem="xTe-NQ-Vqc" firstAttribute="trailing" secondItem="aOZ-JS-N5v" secondAttribute="trailing" type="default" id="3Xq-o7-dDD"/>
                             <constraint firstItem="gdZ-mO-3ox" firstAttribute="top" secondItem="aOZ-JS-N5v" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4Xc-ez-XJ9"/>
                             <constraint firstItem="aOZ-JS-N5v" firstAttribute="top" secondItem="3" secondAttribute="top" constant="122" id="7zj-ys-Dl8"/>
+                            <constraint firstItem="xTe-NQ-Vqc" firstAttribute="top" secondItem="2hg-Ye-Da0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8EA-Bs-80h"/>
                             <constraint firstItem="7Dz-Gw-F2H" firstAttribute="leading" secondItem="LOo-3I-gjg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="AdI-Sl-EcY"/>
                             <constraint firstItem="AEn-rj-rQL" firstAttribute="baseline" secondItem="il3-0Z-TjM" secondAttribute="baseline" type="default" id="Ade-0q-BaW"/>
                             <constraint firstItem="gdZ-mO-3ox" firstAttribute="trailing" secondItem="aOZ-JS-N5v" secondAttribute="trailing" type="default" id="Ezy-ff-BId"/>
                             <constraint firstItem="2hg-Ye-Da0" firstAttribute="top" secondItem="3" secondAttribute="top" constant="7" id="Ga0-BG-Y7c"/>
-                            <constraint firstItem="3GT-XD-Jmo" firstAttribute="top" secondItem="3" secondAttribute="top" constant="63" id="I36-py-0BG"/>
-                            <constraint firstItem="3GT-XD-Jmo" firstAttribute="trailing" secondItem="2hg-Ye-Da0" secondAttribute="trailing" type="default" id="JXb-7f-kVE"/>
+                            <constraint firstItem="xTe-NQ-Vqc" firstAttribute="trailing" secondItem="2hg-Ye-Da0" secondAttribute="trailing" type="default" id="Icg-IN-RhC"/>
                             <constraint firstItem="TfL-3h-Hz2" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Knt-y4-Q5f"/>
                             <constraint firstItem="2hg-Ye-Da0" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="PVi-up-adz"/>
                             <constraint firstItem="7Dz-Gw-F2H" firstAttribute="baseline" secondItem="LOo-3I-gjg" secondAttribute="baseline" type="default" id="QMd-Pw-Rlz"/>
@@ -146,13 +145,11 @@
                             <constraint firstItem="TfL-3h-Hz2" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="bea-cJ-YdJ"/>
                             <constraint firstItem="LOo-3I-gjg" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dm5-TM-qCa"/>
                             <constraint firstItem="AEn-rj-rQL" firstAttribute="baseline" secondItem="7Dz-Gw-F2H" secondAttribute="baseline" type="default" id="dsP-L5-kF5"/>
-                            <constraint firstItem="3GT-XD-Jmo" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="erT-vO-2f7"/>
                             <constraint firstItem="cOE-gC-5qB" firstAttribute="leading" secondItem="TfL-3h-Hz2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="f1W-md-5Vz"/>
                             <constraint firstAttribute="bottom" secondItem="LOo-3I-gjg" secondAttribute="bottom" constant="13" id="jCD-Zs-Nth"/>
                             <constraint firstItem="cOE-gC-5qB" firstAttribute="trailing" secondItem="gdZ-mO-3ox" secondAttribute="trailing" type="default" id="kAb-ka-06S"/>
                             <constraint firstItem="il3-0Z-TjM" firstAttribute="trailing" secondItem="cOE-gC-5qB" secondAttribute="trailing" type="default" id="ma6-sN-BCq"/>
                             <constraint firstItem="TfL-3h-Hz2" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="o2M-Rc-uYK"/>
-                            <constraint firstItem="3GT-XD-Jmo" firstAttribute="trailing" secondItem="aOZ-JS-N5v" secondAttribute="trailing" type="default" id="pFn-hM-25u"/>
                             <constraint firstItem="il3-0Z-TjM" firstAttribute="top" secondItem="cOE-gC-5qB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qoD-ix-IC3"/>
                             <constraint firstItem="AEn-rj-rQL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="198" id="u7P-4c-cuV"/>
                         </constraints>
