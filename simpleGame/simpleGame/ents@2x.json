@@ -1,0 +1,10 @@
+{
+	"cart":{"type":"solid", "width":347, "height":200},
+	"bush":{"type":"deco", "width":80, "height":50},
+	"seed":{"type":"seed", "width":40, "height":36},
+	"seed_gold":{"type":"seed_gold", "width":65, "height":60},
+	"bot":{"type":"bot", "width":222, "height":332},
+	"barn":{"type":"solid", "width":311, "height":352},
+	"rock":{"type":"solid", "width":84, "height":55},
+	"tree":{"type":"deco", "width":311, "height":341}
+}

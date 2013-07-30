@@ -22,7 +22,7 @@ BOOL isLD = NO;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+	[super viewDidLoad];
 //	background = @"splash.png";
 	
 //	NSError *error = NULL;
@@ -31,14 +31,26 @@ BOOL isLD = NO;
 //	NSString *jsonData = [[NSString alloc] initWithContentsOfFile:@"levels.json" encoding:NSUTF8StringEncoding error:nil];
 
 	viewArray = [[NSMutableArray alloc]init];
-		
-	NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"levels" withExtension:@"json"];
-	NSData *someData = [[NSData alloc] initWithContentsOfURL:fileURL];
-	json = [NSJSONSerialization JSONObjectWithData:someData options:kNilOptions error:nil];
 	
-	NSURL *fileURL2 = [[NSBundle mainBundle] URLForResource:@"ents" withExtension:@"json"];
-	NSData *someData2 = [[NSData alloc] initWithContentsOfURL:fileURL2];
-	ents = [NSJSONSerialization JSONObjectWithData:someData2 options:kNilOptions error:nil];
+	NSString *deviceType = [UIDevice currentDevice].model;
+	if ([deviceType isEqualToString:@"iPad"]) {
+		NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"levels@2x" withExtension:@"json"];
+		NSData *someData = [[NSData alloc] initWithContentsOfURL:fileURL];
+		json = [NSJSONSerialization JSONObjectWithData:someData options:kNilOptions error:nil];
+		
+		NSURL *fileURL2 = [[NSBundle mainBundle] URLForResource:@"ents@2x" withExtension:@"json"];
+		NSData *someData2 = [[NSData alloc] initWithContentsOfURL:fileURL2];
+		ents = [NSJSONSerialization JSONObjectWithData:someData2 options:kNilOptions error:nil];
+	}
+	else if ([deviceType isEqualToString:@"iPhone"]) {
+		NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"levels@1x" withExtension:@"json"];
+		NSData *someData = [[NSData alloc] initWithContentsOfURL:fileURL];
+		json = [NSJSONSerialization JSONObjectWithData:someData options:kNilOptions error:nil];
+	
+		NSURL *fileURL2 = [[NSBundle mainBundle] URLForResource:@"ents@1x" withExtension:@"json"];
+		NSData *someData2 = [[NSData alloc] initWithContentsOfURL:fileURL2];
+		ents = [NSJSONSerialization JSONObjectWithData:someData2 options:kNilOptions error:nil];
+	}
 	
 //	NSLog(@"Say stuff : %@", [json objectForKey:@"7"]);
 	
@@ -47,31 +59,35 @@ BOOL isLD = NO;
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
 }
 
 
 -(void)newGame {
 	backView.image = [UIImage imageNamed:@"background.png"];
 	[player killIt:@"reset"];
-    player = nil;
+	player = nil;
 	player = [[Player alloc] initWithParams:0 :150 :self];
 	[player draw];
 	player.score = 0;
 	won = 0;
 	for (UIView *subview in [backView subviews]) {
-        [subview removeFromSuperview];
-    }
+		[subview removeFromSuperview];
+	}
 	//clear Timer
 	[startO setTitle:@"Reset" forState:UIControlStateNormal];
 }
 
 -(void)loadGame:(int)lvl {
 	//clear initial timer
-    player.dead = NO;
-    
+	player.dead = NO;
+	player.jumpa = 0;
 	level = lvl;
+	
+	for (Entity *ent in viewArray) {
+		[ent.entView removeFromSuperview];
+	}
 	[viewArray removeAllObjects];
 	NSDictionary *levelDict = [json objectForKey:[[NSString alloc] initWithFormat:@"%d",level]];
 	NSArray *levelEntArr = levelDict[@"ent"];
@@ -79,7 +95,7 @@ BOOL isLD = NO;
 	
 //	NSLog(@" # %@", levelEntArr[1][1]);
 	
-	for (int i = 1; i<[levelEntArr count]; i++) {
+	for (int i = 0; i<[levelEntArr count]; i++) {
 		Entity *ent = [[Entity alloc] initWithParams:levelEntArr[i][0] :[levelEntArr[i][1] integerValue]:[levelEntArr[i][2] integerValue] :backView :ents];
 		[ent draw];
 		[viewArray addObject:ent];
@@ -90,7 +106,7 @@ BOOL isLD = NO;
 	//[json obj]
 	[player resurrect];
 	//clear game timer
-    [timer invalidate];
+	[timer invalidate];
 	timer = nil;
 	timer = [NSTimer scheduledTimerWithTimeInterval:.01 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
 }
@@ -107,9 +123,13 @@ BOOL isLD = NO;
 	}
 	
 	if (player.winLvl) {
-		[self loadGame:level++];
+		player.winLvl = NO;
+		level++;
+		[self loadGame:level];
+		NSLog(@"%d", level);
 	}
 	if (player.dead) {
+		player.dead = NO;
 		[self loadGame:level];
 	}
 }

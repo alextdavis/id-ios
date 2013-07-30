@@ -22,13 +22,26 @@
 @synthesize state;
 @synthesize jumpa;
 @synthesize jumpt;
+@synthesize ground;
 @synthesize vc;
 
 -(id)initWithParams:(int)xi :(int)yi :(UIViewController*)viewController{
 	x = xi;
 	y = yi;
-	width = 100;
-	height = 100;
+	NSString *deviceType = [UIDevice currentDevice].model;
+	if ([deviceType isEqualToString:@"iPad"]||[deviceType isEqualToString:@"iPad Simulator"]) {
+		width = 100;
+		height = 100;
+		ground = 290;
+	}
+	else if ([deviceType isEqualToString:@"iPhone"]||[deviceType isEqualToString:@"iPhone Simulator"]) {
+		width = 50;
+		height = 50;
+		ground = 145;
+	}
+	else {
+		NSLog(@"%@", deviceType);
+	}
 	playerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chicken.png"]];
 	dead = NO;
 	winLvl = NO;
@@ -43,13 +56,14 @@
 
 
 -(UIView*)draw {
-	[playerView setFrame:CGRectMake(0, 150, 50, 50)];
+	[playerView setFrame:CGRectMake(0, 150, 100, 100)];
 	[vc.view addSubview:playerView];
 	return playerView;
 }
 
 -(UIView*)redraw {
-	[playerView setFrame:CGRectMake(x, y, 50, 50)];
+//	NSLog(@"[%d,%d]",width, height);
+	[playerView setFrame:CGRectMake(x, y, height, width)];
 //	playerView.frame = CGRectMake(x, y, 50, 50);
 	return playerView;
 }
@@ -74,7 +88,7 @@
 			outputting = true;
 		}
 	}
-	if (y >= 145)
+	if (y >= ground)
 	{
 		jumpt = 0;
 		outputting = true;
@@ -85,6 +99,8 @@
 
 -(BOOL)collision:(Entity*)ent :(NSMutableArray*)viewArray {
 	CGRect pFrame = [playerView frame];
+    pFrame.origin.x = x;
+    pFrame.origin.y = y;
 	CGRect eFrame = [((UIImageView*)ent.entView) frame];
 	BOOL outputting = CGRectIntersectsRect(pFrame, eFrame);
 	//NSLog(@"%d", outputting);
@@ -116,10 +132,10 @@
 -(void)fall :(NSMutableArray*)viewArray;
 {
 	int undoY = y;
-	if (y<145) {
+	if (y<ground) {
 		y = y + 2;
 	}
-	else if (y>145) {
+	else if (y>ground) {
 		y = 145;
 	}
 	y = y - jumpa;

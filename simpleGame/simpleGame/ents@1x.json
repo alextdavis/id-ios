@@ -6,5 +6,5 @@
 	"bot":{"type":"bot", "width":111, "height":166},
 	"barn":{"type":"solid", "width":155, "height":176},
 	"rock":{"type":"solid", "width":42, "height":28},
-	"tree":{"type":"deco", "width":311, "height":341}
+	"tree":{"type":"deco", "width":156, "height":170}
 }

@@ -24,6 +24,7 @@
 @property int state;
 @property int jumpa;
 @property int jumpt;
+@property int ground;
 @property UIViewController *vc;
 
 -(id)initWithParams:(int)xi :(int)yi :(UIViewController*)viewController;
