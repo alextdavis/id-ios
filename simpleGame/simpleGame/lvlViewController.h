@@ -1,0 +1,17 @@
+//
+//  lvlViewController.h
+//  simpleGame
+//
+//  Created by iD Student on 7/31/13.
+//  Copyright (c) 2013 iD Student. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface lvlViewController : UIViewController {
+	NSArray *levelsJSON;
+}
+
+
+
+@end

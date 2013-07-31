@@ -47,6 +47,7 @@
 		3F9CA63F17A83A4C000E8F2A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CA63E17A83A4C000E8F2A /* MainStoryboard_iPad.storyboard */; };
 		3F9CA64117A8412C000E8F2A /* levels@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CA64017A8412C000E8F2A /* levels@2x.json */; };
 		3F9CA64317A8415E000E8F2A /* ents@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CA64217A8415E000E8F2A /* ents@2x.json */; };
+		3FCD4F6117A9447A00218998 /* lvlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD4F6017A9447A00218998 /* lvlViewController.m */; };
 		3FD6CC8917A6A544005BA5BB /* ents@1x.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FD6CC8817A6A544005BA5BB /* ents@1x.json */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,8 @@
 		3F9CA63E17A83A4C000E8F2A /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		3F9CA64017A8412C000E8F2A /* levels@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "levels@2x.json"; sourceTree = "<group>"; };
 		3F9CA64217A8415E000E8F2A /* ents@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ents@2x.json"; sourceTree = "<group>"; };
+		3FCD4F5F17A9447A00218998 /* lvlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lvlViewController.h; sourceTree = "<group>"; };
+		3FCD4F6017A9447A00218998 /* lvlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lvlViewController.m; sourceTree = "<group>"; };
 		3FD6CC8817A6A544005BA5BB /* ents@1x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ents@1x.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +187,8 @@
 			children = (
 				3F7F6E89179F12C500CBFC43 /* AppDelegate.h */,
 				3F7F6E8A179F12C500CBFC43 /* AppDelegate.m */,
+				3FCD4F5F17A9447A00218998 /* lvlViewController.h */,
+				3FCD4F6017A9447A00218998 /* lvlViewController.m */,
 				3F7F6E92179F12C600CBFC43 /* MainStoryboard_iPhone.storyboard */,
 				3F9CA63E17A83A4C000E8F2A /* MainStoryboard_iPad.storyboard */,
 				3F7F6E95179F12C600CBFC43 /* ViewController.h */,
@@ -316,6 +321,7 @@
 				3F7F6E97179F12C600CBFC43 /* ViewController.m in Sources */,
 				3F7F6EA2179F1B3E00CBFC43 /* Player.m in Sources */,
 				3F55100417A0108100829498 /* Entity.m in Sources */,
+				3FCD4F6117A9447A00218998 /* lvlViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
