@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 @interface lvlViewController : UIViewController {
-	NSArray *levelsJSON;
+	NSUserDefaults *appSettings;
+	
+	NSArray *titleArray;
+	NSArray *pointArray;
+	NSArray *errorArray;
+	NSArray *urlArray;
 }
-
+- (IBAction)done:(id)sender;
 
 
 @end

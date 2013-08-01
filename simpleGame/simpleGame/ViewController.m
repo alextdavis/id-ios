@@ -23,18 +23,25 @@ BOOL isLD = NO;
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-//	background = @"splash.png";
 	
-//	NSError *error = NULL;
-//	NSData *levels = [[NSData alloc] initWithContentsOfFile:@"levels.json"];
-//	json = [NSJSONSerialization JSONObjectWithData: levels options:kNilOptions error:&error];
-//	NSString *jsonData = [[NSString alloc] initWithContentsOfFile:@"levels.json" encoding:NSUTF8StringEncoding error:nil];
+	appSettings = [NSUserDefaults standardUserDefaults];
 
+	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
 	viewArray = [[NSMutableArray alloc]init];
+	
+	NSString *levelPath = [appSettings objectForKey:@"levelPath"];
+	if (levelPath == nil) {
+		levelPath = @"levels@1x";
+	}
+	NSLog(@"appearing");
 	
 	NSString *deviceType = [UIDevice currentDevice].model;
 	if ([deviceType isEqualToString:@"iPad"]||[deviceType isEqualToString:@"iPad Simulator"]) {
-		NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"levels@2x" withExtension:@"json"];
+		NSURL *fileURL = [[NSBundle mainBundle] URLForResource:levelPath withExtension:@"json"];
 		NSData *someData = [[NSData alloc] initWithContentsOfURL:fileURL];
 		json = [NSJSONSerialization JSONObjectWithData:someData options:kNilOptions error:nil];
 		
@@ -43,18 +50,14 @@ BOOL isLD = NO;
 		ents = [NSJSONSerialization JSONObjectWithData:someData2 options:kNilOptions error:nil];
 	}
 	else if ([deviceType isEqualToString:@"iPhone"]||[deviceType isEqualToString:@"iPhone Simulator"]) {
-		NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"levels@1x" withExtension:@"json"];
+		NSURL *fileURL = [[NSBundle mainBundle] URLForResource:levelPath withExtension:@"json"];
 		NSData *someData = [[NSData alloc] initWithContentsOfURL:fileURL];
 		json = [NSJSONSerialization JSONObjectWithData:someData options:kNilOptions error:nil];
-	
+		
 		NSURL *fileURL2 = [[NSBundle mainBundle] URLForResource:@"ents@1x" withExtension:@"json"];
 		NSData *someData2 = [[NSData alloc] initWithContentsOfURL:fileURL2];
 		ents = [NSJSONSerialization JSONObjectWithData:someData2 options:kNilOptions error:nil];
 	}
-	
-//	NSLog(@"Say stuff : %@", [json objectForKey:@"7"]);
-	
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning

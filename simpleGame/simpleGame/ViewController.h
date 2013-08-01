@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Player.h"
 #import "Entity.h"
-#import "lvlViewController.h"
 
 @interface ViewController : UIViewController {
 	
@@ -26,6 +25,7 @@
 	NSDictionary *ents;
 	Player *player;
 	
+	NSUserDefaults *appSettings;
 }
 
 @property (nonatomic, strong) NSMutableArray *viewArray;
